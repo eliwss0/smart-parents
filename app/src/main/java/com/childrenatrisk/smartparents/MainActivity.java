@@ -3,41 +3,72 @@ package com.childrenatrisk.smartparents;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.view.View;
-
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     AppBarConfiguration appBarConfiguration;
+
+    DrawerLayout drawer;
+    NavController navController;
+    NavigationView navigationView;
+    CollapsingToolbarLayout collapsingToolbar;
+    ActionBarDrawerToggle toggle;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        Toolbar toolbar = findViewById(R.id.toolbar_layout);
-        setSupportActionBar(toolbar);
-        CollapsingToolbarLayout collapsingToolbar = findViewById(R.id.collapsing_toolbar_layout);
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        appBarConfiguration =
-                new AppBarConfiguration.Builder(navController.getGraph()).setDrawerLayout(drawerLayout).build();
-        NavigationView navView = findViewById(R.id.nav_view);
+        drawer = findViewById(R.id.drawer_layout);
+        toolbar = findViewById(R.id.toolbar_layout);
+        collapsingToolbar = findViewById(R.id.collapsing_toolbar_layout);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
+        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).setDrawerLayout(drawer).build();
         NavigationUI.setupWithNavController(collapsingToolbar,toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
+
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int id = item.getItemId();
+                Fragment fragment=null;
+                if(id == R.id.test_item) {
+                    fragment=new HomeFragment();
+                }
+                if (fragment != null) {
+                    FrameLayout f1= findViewById(R.id.nav_host_fragment);
+                    f1.removeAllViews();
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.add(R.id.nav_host_fragment,fragment);
+                    ft.commit();
+                }
+                DrawerLayout drawer = findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
     }
 
     @Override
@@ -60,5 +91,9 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp(); //Crashing when navigating back
     }
-
+    @Override
+    public void onBackPressed() {
+        //TODO confirm exit
+        super.onBackPressed();
+    }
 }

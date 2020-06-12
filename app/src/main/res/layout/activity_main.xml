@@ -13,30 +13,8 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/tall_toolbar_height">
+    <include layout="@layout/nav_bar_layout"/>
 
-            <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:id="@+id/collapsing_toolbar_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:contentScrim="?attr/colorPrimary"
-                app:expandedTitleGravity="top"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-                app:titleEnabled="false"
-                app:titleTextAppearance="@style/Toolbar.TitleText">
-
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin"
-                    app:title="TEST"
-                    app:titleTextAppearance="@style/Toolbar.TitleText" />
-
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
-        </com.google.android.material.appbar.AppBarLayout>
     </LinearLayout>
 
     <include layout="@layout/content_main" />
@@ -46,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true" />
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_main_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
