@@ -13,5 +13,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_open">navdrawer open</string>
     <string name="navigation_drawer_close">navdrawer close</string>
-    <string name="test">test</string>
+    <string name="health_menu">Health</string>
+    <string name="nutrition_menu">Nutrition</string>
+    <string name="education_menu">Education</string>
+    <string name="child_safety_menu">Child Safety</string>
+    <string name="parenting_menu">Parenting</string>
 </resources>

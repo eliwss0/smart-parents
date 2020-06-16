@@ -51,10 +51,25 @@ public class MainActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(MenuItem item) {
                 int id = item.getItemId();
                 Fragment fragment=null;
-                if(id == R.id.test_item) {
-                    fragment=new HomeFragment();
+                switch (id) {
+                    case R.id.home_menu:
+                        fragment=new HomeFragment();
+                        break;
+                    case R.id.health_menu:
+                        fragment=new HealthFragment();
+                        break;
+                    case R.id.nutrition_menu:
+                        break;
+                    case R.id.education_menu:
+                        break;
+                    case R.id.child_safety_menu:
+                        break;
+                    case R.id.parenting_menu:
+                        break;
+                    default:
+                        break;
                 }
-                if (fragment != null) {
+                if (fragment != null) { //possible to work in nav graph?
                     FrameLayout f1= findViewById(R.id.nav_host_fragment);
                     f1.removeAllViews();
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -66,6 +81,7 @@ public class MainActivity extends AppCompatActivity{
                 return true;
             }
         });
+
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
