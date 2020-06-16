@@ -59,12 +59,16 @@ public class MainActivity extends AppCompatActivity{
                         fragment=new HealthFragment();
                         break;
                     case R.id.nutrition_menu:
+                        fragment=new NutritionFragment();
                         break;
                     case R.id.education_menu:
+                        fragment=new EducationFragment();
                         break;
                     case R.id.child_safety_menu:
+                        fragment=new ChildSafetyFragment();
                         break;
                     case R.id.parenting_menu:
+                        fragment=new ParentingFragment();
                         break;
                     default:
                         break;
@@ -111,5 +115,8 @@ public class MainActivity extends AppCompatActivity{
     public void onBackPressed() {
         //TODO confirm exit
         super.onBackPressed();
+    }
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
     }
 }
