@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-    <include layout="@layout/nav_bar_layout"/>
+    <include layout="@navigation/nav_bar_layout"/>
 
     </LinearLayout>
 

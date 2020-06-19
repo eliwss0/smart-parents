@@ -1,12 +1,16 @@
 package com.childrenatrisk.smartparents;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 public class HomeFragment extends Fragment {
 
@@ -57,4 +61,7 @@ public class HomeFragment extends Fragment {
         View rootView=inflater.inflate(R.layout.fragment_home, container, false);
         return rootView;
     }
+
+    //Refuses to use in HomeFragment, only uses in MainActivity
+    public void onClickCaRLogo(View view) {}
 }

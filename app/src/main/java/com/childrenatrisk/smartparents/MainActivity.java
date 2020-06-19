@@ -1,10 +1,15 @@
 package com.childrenatrisk.smartparents;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,9 +22,16 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewManager;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -31,6 +43,7 @@ public class MainActivity extends AppCompatActivity{
     CollapsingToolbarLayout collapsingToolbar;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +86,7 @@ public class MainActivity extends AppCompatActivity{
                     default:
                         break;
                 }
-                if (fragment != null) { //possible to work in nav graph?
+                if (fragment != null) {
                     FrameLayout f1= findViewById(R.id.nav_host_fragment);
                     f1.removeAllViews();
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -118,5 +131,18 @@ public class MainActivity extends AppCompatActivity{
     }
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
+    }
+
+    //onClick goes by activity, not fragments. Still needs to be in fragment though
+    public void onClickCaRLogo(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.childrenatrisk.org"));
+        startActivity(browserIntent);
+    }
+
+    public void button1Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+//        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
+        openWebViewIntent.putExtra("passedURL","https://www.mozilla.org");
+        startActivity(openWebViewIntent);
     }
 }
