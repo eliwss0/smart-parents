@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/home_screen"
         android:name="com.childrenatrisk.smartparents.HomeFragment"
-        android:label="TEST"
+        android:label="NAV_GRAPH_TEST"
         tools:layout="@layout/fragment_home" />
 
 </navigation>

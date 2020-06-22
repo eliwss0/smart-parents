@@ -70,5 +70,5 @@ public class HealthFragment extends Fragment {
         ((MainActivity) getActivity()).setActionBarTitle("Health");
     }
 
-    public void button1Click(View view) {}
+    public void healthButton1Click(View view) {}
 }

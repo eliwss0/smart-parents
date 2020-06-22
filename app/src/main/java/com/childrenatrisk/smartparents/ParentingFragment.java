@@ -68,4 +68,6 @@ public class ParentingFragment extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).setActionBarTitle("Parenting");
     }
+
+    public void parentingButton1Click(View view) {}
 }

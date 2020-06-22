@@ -16,15 +16,14 @@
     <string name="child_safety_menu">Child Safety</string>
     <string name="parenting_menu">Parenting</string>
 
-    <!--    Health page-->
-    <string name="button1_label">BUTTON 1</string>
-    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <!--    Web_view menu-->
+    <string name="close_web_view">Close</string>
+    <string name="refresh_web_view">Refresh</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+
+    <!--    Health page-->
+    <string name="health_button1_label">You have rights: Protect your Health</string>
+
+    <!--    Parenting page-->
+    <string name="parenting_button1_label">Find child care</string>
 </resources>
