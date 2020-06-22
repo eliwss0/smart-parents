@@ -7,9 +7,4 @@
         android:icon="@drawable/refresh"
         android:title="@string/refresh_web_view"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/close_web_view"
-        android:icon="@drawable/close"
-        android:title="@string/close_web_view"
-        app:showAsAction="ifRoom" />
 </menu>

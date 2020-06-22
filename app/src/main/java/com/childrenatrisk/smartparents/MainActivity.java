@@ -1,3 +1,5 @@
+//
+
 package com.childrenatrisk.smartparents;
 
 import android.content.Intent;
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity{
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
 
-
+//    TODO resize icons
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -27,7 +27,10 @@ public class WebViewActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true); //if page uses Javascript
 
-        webView.loadUrl(passedURL); //way to change depending on where it is called?
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        webView.loadUrl(passedURL);
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -51,7 +54,7 @@ public class WebViewActivity extends AppCompatActivity {
             case R.id.refresh_web_view:
                 webView.reload();
                 return true;
-            case R.id.close_web_view:
+            case android.R.id.home:
 //                Remove webView from parent view?
 //                mWebContainer.removeAllViews();
                 webView.clearHistory();
