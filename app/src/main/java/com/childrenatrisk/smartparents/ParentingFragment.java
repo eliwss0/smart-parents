@@ -70,4 +70,5 @@ public class ParentingFragment extends Fragment {
     }
 
     public void parentingButton1Click(View view) {}
+    public void parentingButton2Click(View view) {}
 }

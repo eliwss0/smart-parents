@@ -15,4 +15,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nutrition_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nutritionButton1Click"
+        android:text="@string/nutrition_button1_label"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

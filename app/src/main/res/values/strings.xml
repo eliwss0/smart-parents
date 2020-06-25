@@ -24,6 +24,15 @@
     <!--    Health page-->
     <string name="health_button1_label">You have rights: Protect your Health</string>
 
+    <!--    Nutrition page-->
+    <string name="nutrition_button1_label">Find a food bank</string>
+
+    <!--    Education page-->
+    <!--    Child Safety page-->
+
+
     <!--    Parenting page-->
     <string name="parenting_button1_label">Find child care</string>
+    <string name="parenting_button2_label">Childcare Aware Texas</string>
+
 </resources>

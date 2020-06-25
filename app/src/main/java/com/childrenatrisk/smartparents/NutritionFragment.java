@@ -68,4 +68,6 @@ public class NutritionFragment extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).setActionBarTitle("Nutrition");
     }
+
+    public void nutritionButton1Click(View view) {}
 }

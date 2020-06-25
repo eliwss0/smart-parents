@@ -55,8 +55,7 @@ public class WebViewActivity extends AppCompatActivity {
                 webView.reload();
                 return true;
             case android.R.id.home:
-//                Remove webView from parent view?
-//                mWebContainer.removeAllViews();
+//                mWebContainer.removeAllViews();   Remove webView from parent view
                 webView.clearHistory();
                 webView.onPause();
                 webView.removeAllViews();

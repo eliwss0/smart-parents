@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         switch (item.getItemId()) {
+            case R.id.action_about:
+                //About page goes here
+                return true;
             default:
                 return NavigationUI.onNavDestinationSelected(item, navController)
                         || super.onOptionsItemSelected(item);
@@ -118,8 +121,9 @@ public class MainActivity extends AppCompatActivity{
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp(); //Crashing when navigating back
+                || super.onSupportNavigateUp();
     }
+
     @Override
     public void onBackPressed() {
         //TODO confirm exit
@@ -129,14 +133,13 @@ public class MainActivity extends AppCompatActivity{
         getSupportActionBar().setTitle(title);
     }
 
-    //onClick goes by activity, not fragments. Still needs to be in fragment though
+    //click functions for buttons in app TODO try to put functions in respective fragments?
     public void onClickCaRLogo(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.childrenatrisk.org"));
         startActivity(browserIntent);
     }
-
     public void healthButton1Click(View view) {
-        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);  //"https://docs.google.com/gview?embedded=true&url=" opens pdf using google drive pdf viewer
         openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
         startActivity(openWebViewIntent);
     }
@@ -144,6 +147,16 @@ public class MainActivity extends AppCompatActivity{
     public void parentingButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL","https://findchildcare.collabforchildren.org/");
+        startActivity(openWebViewIntent);
+    }
+    public void parentingButton2Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/state/texas/");
+        startActivity(openWebViewIntent);
+    }
+    public void nutritionButton1Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://www.feedingamerica.org/find-your-local-foodbank");
         startActivity(openWebViewIntent);
     }
 }
