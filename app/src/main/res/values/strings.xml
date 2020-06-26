@@ -26,9 +26,11 @@
 
     <!--    Nutrition page-->
     <string name="nutrition_button1_label">Find a food bank</string>
+    <string name="nutrition_button2_label">Find school meals</string>
 
     <!--    Education page-->
     <!--    Child Safety page-->
+    <string name="child_safety_button2_label">Online safety</string>
 
 
     <!--    Parenting page-->

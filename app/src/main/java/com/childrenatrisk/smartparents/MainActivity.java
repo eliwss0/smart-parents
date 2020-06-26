@@ -134,16 +134,41 @@ public class MainActivity extends AppCompatActivity{
     }
 
     //click functions for buttons in app TODO try to put functions in respective fragments?
+    //Home
     public void onClickCaRLogo(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.childrenatrisk.org"));
         startActivity(browserIntent);
     }
+
+    //Health
     public void healthButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);  //"https://docs.google.com/gview?embedded=true&url=" opens pdf using google drive pdf viewer
         openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
         startActivity(openWebViewIntent);
     }
 
+    //Nutrition
+    public void nutritionButton1Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://www.feedingamerica.org/find-your-local-foodbank");
+        startActivity(openWebViewIntent);
+    }
+    public void nutritionButton2Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://schoolmealfinder.hoonuit.com/?filter_state=tx");
+        startActivity(openWebViewIntent);
+    }
+
+    //Education
+
+    //Child Safety
+    public void childSafetyButton1Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://love146.org/action/online-safety/");
+        startActivity(openWebViewIntent);
+    }
+
+    //Parenting
     public void parentingButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL","https://findchildcare.collabforchildren.org/");
@@ -152,11 +177,6 @@ public class MainActivity extends AppCompatActivity{
     public void parentingButton2Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/state/texas/");
-        startActivity(openWebViewIntent);
-    }
-    public void nutritionButton1Click(View view) {
-        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL", "https://www.feedingamerica.org/find-your-local-foodbank");
         startActivity(openWebViewIntent);
     }
 }

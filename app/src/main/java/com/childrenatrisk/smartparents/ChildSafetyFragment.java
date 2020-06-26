@@ -68,4 +68,6 @@ public class ChildSafetyFragment extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).setActionBarTitle("Child Safety");
     }
+
+    public void childSafetyButton1Click(View view) {}
 }
