@@ -107,14 +107,28 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        switch (item.getItemId()) {
+        int id=item.getItemId();
+        Fragment fragment=null;
+        switch (id) {
             case R.id.action_about:
                 //About page goes here
-                return true;
+                fragment=new AboutFragment();
+                break;
+            case R.id.action_settings:
+                //Settings page goes here
+                fragment=new SettingsFragment();
+                break;
             default:
-                return NavigationUI.onNavDestinationSelected(item, navController)
-                        || super.onOptionsItemSelected(item);
+                break;
         }
+        if (fragment != null) {
+            FrameLayout f1= findViewById(R.id.nav_host_fragment);
+            f1.removeAllViews();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.add(R.id.nav_host_fragment,fragment);
+            ft.commit();
+        }
+        return true;
     }
 
     @Override
@@ -127,7 +141,16 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public void onBackPressed() {
         //TODO confirm exit
-        super.onBackPressed();
+        if(getTitle()!="Smart Parents") {   //transition to home fragment
+            FrameLayout f1= findViewById(R.id.nav_host_fragment);
+            f1.removeAllViews();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.add(R.id.nav_host_fragment,new HomeFragment());
+            ft.commit();
+            getSupportActionBar().setTitle("Smart Parents");    //Change if home fragment title changes
+        }
+        else
+            super.onBackPressed();
     }
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
@@ -177,6 +200,11 @@ public class MainActivity extends AppCompatActivity{
     public void parentingButton2Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/state/texas/");
+        startActivity(openWebViewIntent);
+    }
+    public void parentingButton3Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://find.frontlinechildcare.texas.gov/parent/dashboard");
         startActivity(openWebViewIntent);
     }
 }

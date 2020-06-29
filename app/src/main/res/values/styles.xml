@@ -6,6 +6,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+<!--    System controlled dark/light mode, implement later?-->
+<!--    <style name="AppTheme" parent="Theme.AppCompat.DayNight"/>-->
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

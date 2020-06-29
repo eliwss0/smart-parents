@@ -21,6 +21,7 @@ public class WebViewActivity extends AppCompatActivity {
         Intent intent=getIntent();
         String passedURL=intent.getStringExtra("passedURL");
         setContentView(R.layout.activity_web_view);
+        //TODO use setActionBarTitle depending on link?
 
         webView=findViewById(R.id.web_view);
         webView.setWebViewClient(new WebViewClient());

@@ -10,21 +10,21 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ParentingFragment#newInstance} factory method to
+ * Use the {@link AboutFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ParentingFragment extends Fragment {
+public class AboutFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM1="param1";
+    private static final String ARG_PARAM2="param2";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public ParentingFragment() {
+    public AboutFragment() {
         // Required empty public constructor
     }
 
@@ -34,12 +34,12 @@ public class ParentingFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ParentingFragment.
+     * @return A new instance of fragment AboutFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ParentingFragment newInstance(String param1, String param2) {
-        ParentingFragment fragment = new ParentingFragment();
-        Bundle args = new Bundle();
+    public static AboutFragment newInstance(String param1, String param2) {
+        AboutFragment fragment=new AboutFragment();
+        Bundle args=new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
@@ -49,9 +49,9 @@ public class ParentingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        if (getArguments()!=null) {
+            mParam1=getArguments().getString(ARG_PARAM1);
+            mParam2=getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -59,17 +59,6 @@ public class ParentingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView=inflater.inflate(R.layout.fragment_parenting, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_about, container, false);
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        ((MainActivity) getActivity()).setActionBarTitle("Parenting");
-    }
-
-    public void parentingButton1Click(View view) {}
-    public void parentingButton2Click(View view) {}
-    public void parentingButton3Click(View view) {}
 }
