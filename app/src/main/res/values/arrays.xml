@@ -1,11 +1,11 @@
 <resources>
-    <string-array name="reply_entries">
-        <item>Reply</item>
-        <item>Reply to all</item>
+    <string-array name="state_entries">
+        <item>Texas</item>
+        <item>Other Within United States</item>
     </string-array>
 
-    <string-array name="reply_values">
-        <item>reply</item>
-        <item>reply_all</item>
+    <string-array name="state_values">
+        <item>tx</item>
+        <item>us_national</item>
     </string-array>
 </resources>

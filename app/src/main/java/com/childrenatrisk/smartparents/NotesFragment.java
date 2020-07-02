@@ -8,17 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class AboutFragment extends Fragment {
+public class NotesFragment extends Fragment {
 
-    public AboutFragment() {}
+    public NotesFragment() {}
 
-    public static AboutFragment newInstance() {
-        AboutFragment fragment=new AboutFragment();
+    public static NotesFragment newInstance() {
+        NotesFragment fragment=new NotesFragment();
         Bundle args=new Bundle();
         fragment.setArguments(args);
         return fragment;
     }
 
+    //TODO retain notes somehow (save to file with snackbar or toast to confirm save?)
+    //TODO better switch between notes and other fragments
+    //TODO dismiss keyboard on navigate away
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,13 +30,12 @@ public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.fragment_about, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_notes, container, false);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) getActivity()).setActionBarTitle("About");
+        ((MainActivity) getActivity()).setActionBarTitle("Notes");
     }
 }

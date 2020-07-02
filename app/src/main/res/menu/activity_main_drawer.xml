@@ -21,4 +21,7 @@
     <item android:id="@+id/parenting_menu"
         android:icon="@drawable/parent"
         android:title="@string/parenting_menu" />
+    <item android:id="@+id/notes_menu"
+        android:icon="@drawable/notes"
+        android:title="@string/notes_menu" />
 </menu>
