@@ -1,13 +1,12 @@
-//
 
 package com.childrenatrisk.smartparents;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -24,11 +23,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
 
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity{
     DrawerLayout drawerLayout;
     NavController navController;
     NavigationView navigationView;
-//    CollapsingToolbarLayout collapsingToolbar;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
 
@@ -50,11 +48,10 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer_layout);
         toolbar = findViewById(R.id.toolbar_layout);
-//        collapsingToolbar = findViewById(R.id.collapsing_toolbar_layout);
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).setDrawerLayout(drawerLayout).build();
-        NavigationUI.setupWithNavController(/*collapsingToolbar,*/toolbar,navController,appBarConfiguration);
+        NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
 
         navigationView = findViewById(R.id.nav_view);
@@ -145,13 +142,13 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
 
     @Override
     public void onBackPressed() {
-        //TODO confirm exit
+        //TODO confirm exit with toast
+        boolean readyToExit=false;
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             this.drawerLayout.closeDrawer(GravityCompat.START);
             return;
@@ -163,10 +160,29 @@ public class MainActivity extends AppCompatActivity{
             ft.add(R.id.nav_host_fragment,new HomeFragment());
             ft.commit();
             getSupportActionBar().setTitle("Home");    //Change if home fragment title changes
+            return;
+        }
+        if(!readyToExit) {
+            Toast.makeText(getApplication(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+            readyToExit=true;
+
+        }
+        if(readyToExit) {
+
         }
         else
             super.onBackPressed();
     }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (getCurrentFocus() != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }

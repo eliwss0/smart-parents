@@ -8,19 +8,23 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class NotesFragment extends Fragment {
 
-    public NotesFragment() {
-    }
+    EditText notesField;
+
+    public NotesFragment() {}
 
     public static NotesFragment newInstance() {
         NotesFragment fragment=new NotesFragment();
@@ -29,7 +33,6 @@ public class NotesFragment extends Fragment {
         return fragment;
     }
 
-    //TODO load notes
     //TODO better switch between notes and other fragments
     //TODO dismiss keyboard on outside tap or other input
     @Override
@@ -38,11 +41,12 @@ public class NotesFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_notes, container, false);
         FloatingActionButton fabSave=view.findViewById(R.id.save_notes_fab);
-        final EditText notesField = view.findViewById(R.id.notes_input);
+        notesField = view.findViewById(R.id.notes_input);
+        notesField.setText(readNotesFile(getActivity(),"notes.txt"));
+
         fabSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,13 +57,14 @@ public class NotesFragment extends Fragment {
                         e.printStackTrace();
                     }
                     if (fileExists(getActivity(),"notes.txt")) {
-                        Snackbar.make(view, "Saved notes", Snackbar.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Saved notes", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
         return view;
     }
+
 
     @Override
     public void onResume() {
@@ -76,8 +81,23 @@ public class NotesFragment extends Fragment {
     }
 
     public void writeNotesFile(Context context,String fileContents) throws IOException {
-        String fileName="notes.txt";
+        String fileName="notes.txt";    //saves to internal storage (data/data/com.childrenatrisk.smartparetns/files/notes.txt)
         FileOutputStream fileOut=context.openFileOutput(fileName, Context.MODE_PRIVATE);
         fileOut.write(fileContents.getBytes());
+    }
+
+    public String readNotesFile(Context context,String fileName) {
+        File fileEvents=new File(context.getFilesDir()+"/"+fileName);
+        StringBuilder text=new StringBuilder();
+        try {
+            BufferedReader br=new BufferedReader(new FileReader(fileEvents));
+            String line;
+            while ((line=br.readLine())!=null) {
+                text.append(line);
+                text.append('\n');
+            }
+            br.close();
+        } catch (IOException e) {}
+        return text.toString();
     }
 }

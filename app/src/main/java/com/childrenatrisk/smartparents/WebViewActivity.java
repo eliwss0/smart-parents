@@ -48,6 +48,7 @@ public class WebViewActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.web_view_menu, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
