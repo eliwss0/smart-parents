@@ -3,6 +3,7 @@ package com.childrenatrisk.smartparents;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -28,7 +29,7 @@ public class WebViewActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true); //if page uses Javascript
 
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.close);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         webView.loadUrl(passedURL);
@@ -55,13 +56,21 @@ public class WebViewActivity extends AppCompatActivity {
             case R.id.refresh_web_view:
                 webView.reload();
                 return true;
+            case R.id.open_in_web_browser:
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(webView.getUrl()));
+                startActivity(browserIntent);
+                return true;
+            case R.id.web_back:
+                webView.goBack();
+                return true;
+            case R.id.web_forward:
+                webView.goForward();
+                return true;
             case android.R.id.home:
 //                mWebContainer.removeAllViews();   Remove webView from parent view
                 webView.clearHistory();
                 webView.onPause();
                 webView.removeAllViews();
-                webView.destroyDrawingCache();
-                webView.destroy();
                 webView = null;
                 finish();
                 return true;

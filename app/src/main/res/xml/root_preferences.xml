@@ -10,9 +10,9 @@
             app:title="@string/settings_state_selection_label"
             app:entries="@array/state_entries"
             app:entryValues="@array/state_values"
-            app:defaultValue="reply"
+            app:defaultValue="Texas"
             app:useSimpleSummaryProvider="true"/>
 
     </PreferenceCategory>
-
+<!--    TODO Really necessary?-->
 </PreferenceScreen>

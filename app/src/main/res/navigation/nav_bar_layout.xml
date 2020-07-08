@@ -5,24 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar_layout"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="top"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:titleEnabled="false">
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:title=""
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+<!--                TODO change title to reflect page automatically?-->
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar_layout"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:title=""
-                app:titleTextAppearance="@style/Toolbar.TitleText" />
-<!--                TODO change title to reflect page-->
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

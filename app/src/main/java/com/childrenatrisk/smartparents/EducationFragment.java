@@ -36,4 +36,6 @@ public class EducationFragment extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).setActionBarTitle("Education");
     }
+
+    public void educationButton1Click(View view) {}
 }

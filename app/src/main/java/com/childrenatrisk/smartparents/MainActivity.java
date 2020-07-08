@@ -220,6 +220,11 @@ public class MainActivity extends AppCompatActivity{
     }
 
     //Education
+    public void educationButton1Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://texasschoolguide.org");
+        startActivity(openWebViewIntent);
+    }
 
     //Child Safety
     public void childSafetyButton1Click(View view) {

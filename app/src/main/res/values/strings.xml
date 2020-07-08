@@ -23,6 +23,9 @@
     <!--    Web_view menu-->
     <string name="close_web_view">Close</string>
     <string name="refresh_web_view">Refresh</string>
+    <string name="external_browser">Open in default web browser</string>
+    <string name="web_forward">Forward</string>
+    <string name="web_back">Back</string>
 
 
     <!--    Health page-->
@@ -33,8 +36,10 @@
     <string name="nutrition_button2_label">Find school meals</string>
 
     <!--    Education page-->
+    <string name="education_button1_label">Texas School Guide</string>
+
     <!--    Child Safety page-->
-    <string name="child_safety_button2_label">Online safety</string>
+    <string name="child_safety_button1_label">Online safety</string>
 
 
     <!--    Parenting page-->
@@ -45,5 +50,7 @@
     <!--    Settings-->
     <string name="settings_category1_label">Location</string>
     <string name="settings_state_selection_label">State</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

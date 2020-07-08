@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="childSafetyButton1Click"
-        android:text="@string/child_safety_button2_label"
+        android:text="@string/child_safety_button1_label"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
