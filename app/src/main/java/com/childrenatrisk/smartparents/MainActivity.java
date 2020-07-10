@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity{
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
 
-//    TODO resize icons
+//    TODO resize/recolor icons, descriptions for resources?
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity{
                         break;
                     case R.id.parenting_menu:
                         fragment=new ParentingFragment();
+                        break;
+                    case R.id.hotline_menu:
+                        fragment=new HotlineFragment();
                         break;
                     case R.id.notes_menu:
                         fragment=new NotesFragment();
