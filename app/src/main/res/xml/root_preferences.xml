@@ -1,18 +1,12 @@
 <PreferenceScreen
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<!--TODO language setting?-->
-    <PreferenceCategory
-        app:title="@string/settings_category1_label">
-
         <ListPreference
-            app:key="state"
-            app:title="@string/settings_state_selection_label"
-            app:entries="@array/state_entries"
-            app:entryValues="@array/state_values"
-            app:defaultValue="Texas"
+            app:key="lang"
+            app:title="@string/settings_lang_selection_label"
+            app:entries="@array/lang_entries"
+            app:entryValues="@array/lang_values"
+            app:defaultValue="System Default"
             app:useSimpleSummaryProvider="true"/>
 
-    </PreferenceCategory>
-<!--    TODO Really necessary?-->
 </PreferenceScreen>

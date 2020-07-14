@@ -25,8 +25,7 @@ public class EducationFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView=inflater.inflate(R.layout.fragment_education, container, false);
         return rootView;
     }
@@ -38,4 +37,5 @@ public class EducationFragment extends Fragment {
     }
 
     public void educationButton1Click(View view) {}
+    public void educationButton2Click(View view) {}
 }

@@ -1,9 +1,9 @@
-
 package com.childrenatrisk.smartparents;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -53,18 +53,12 @@ public class MainActivity extends AppCompatActivity{
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).setDrawerLayout(drawerLayout).build();
         NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-//                //Disable Texas specific resources if set to anywhere but Texas
-//                SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-//                if(prefs.getString("state","us_national").equals("tx")) {
-//                    Button testbutton=(Button) findViewById(R.id.health_button1);
-//                    if(testbutton!=null)
-//                        testbutton.setClickable(false);
-//                }
                 int id = item.getItemId();
                 Fragment fragment=null;
                 switch (id) {   //Fragments should be activities, change if possible after feature complete
@@ -226,6 +220,11 @@ public class MainActivity extends AppCompatActivity{
     public void educationButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL","https://texasschoolguide.org");
+        startActivity(openWebViewIntent);
+    }
+    public void educationButton2Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","http://google.com"); //https://30days.familieslearning.org/ Does not load well on mobile
         startActivity(openWebViewIntent);
     }
 

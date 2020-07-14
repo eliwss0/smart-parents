@@ -1,11 +1,13 @@
 <resources>
-    <string-array name="state_entries">
-        <item>Texas</item>
-        <item>Other Within United States</item>
+    <string-array name="lang_entries">
+        <item>System Default</item>
+        <item>English</item>
+        <item>Español</item>
     </string-array>
 
-    <string-array name="state_values">
-        <item>tx</item>
-        <item>us_national</item>
+    <string-array name="lang_values">
+        <item>system</item>
+        <item>en</item>
+        <item>es</item>
     </string-array>
 </resources>

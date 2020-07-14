@@ -3,15 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.childrenatrisk.smartparents.WebViewActivity">
     <item
-        android:id="@+id/open_in_web_browser"
-        android:icon="@drawable/web_browser"
-        android:title="@string/external_browser"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/refresh_web_view"
         android:icon="@drawable/refresh"
         android:title="@string/refresh_web_view"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="collapseActionView" />
     <item
         android:id="@+id/web_back"
         android:icon="@drawable/back"
@@ -22,4 +17,9 @@
         android:icon="@drawable/forward"
         android:title="@string/web_forward"
         app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/open_in_web_browser"
+        android:icon="@drawable/web_browser"
+        android:title="@string/external_browser"
+        app:showAsAction="never" />
 </menu>

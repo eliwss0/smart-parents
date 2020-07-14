@@ -26,4 +26,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/education_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="educationButton2Click"
+        android:text="@string/education_button2_label"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/education_button1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

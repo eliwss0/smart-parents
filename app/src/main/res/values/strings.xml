@@ -24,7 +24,7 @@
     <!--    Web_view menu-->
     <string name="close_web_view">Close</string>
     <string name="refresh_web_view">Refresh</string>
-    <string name="external_browser">Open in default web browser</string>
+    <string name="external_browser">Open in default browser</string>
     <string name="web_forward">Forward</string>
     <string name="web_back">Back</string>
 
@@ -38,6 +38,8 @@
 
     <!--    Education page-->
     <string name="education_button1_label">Texas School Guide</string>
+    <string name="education_button2_label">NEEDS NEW WEBSITE</string>
+
 
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Online safety</string>
@@ -55,7 +57,6 @@
 
 
     <!--    Settings-->
-    <string name="settings_category1_label">Location</string>
-    <string name="settings_state_selection_label">State</string>
+    <string name="settings_lang_selection_label">Language</string>
 
 </resources>
