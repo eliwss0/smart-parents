@@ -18,18 +18,17 @@
 
     <ImageView
         android:id="@+id/CaR_logo"
-        android:layout_width="205dp"
-        android:layout_height="76dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:clickable="true"
         android:contentDescription="CaR Logo"
+        android:focusable="true"
         android:onClick="onClickCaRLogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945"
-        app:srcCompat="@drawable/car_logo"
-        android:focusable="true" />
+        app:srcCompat="@drawable/car_logo" />
 
     <Button
         android:id="@+id/TEST"
@@ -38,6 +37,16 @@
         android:onClick="onClickTest"
         android:text="TEST"
         app:layout_constraintBottom_toTopOf="@+id/home_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/smartparents_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
