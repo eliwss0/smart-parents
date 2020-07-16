@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NutritionFragment extends Fragment {
+public class HealthNutritionFragment extends Fragment {
 
-    public NutritionFragment() {}
+    public HealthNutritionFragment() {}
 
-    public static NutritionFragment newInstance() {
-        NutritionFragment fragment = new NutritionFragment();
+    public static HealthNutritionFragment newInstance() {
+        HealthNutritionFragment fragment = new HealthNutritionFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -27,16 +27,17 @@ public class NutritionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.fragment_nutrition, container, false);
+        View rootView=inflater.inflate(R.layout.fragment_health_nutrition, container, false);
         return rootView;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) getActivity()).setActionBarTitle("Nutrition");
+        ((MainActivity) getActivity()).setActionBarTitle("Health and Nutrition");
     }
 
+    public void healthButton1Click(View view) {}    //TODO use local copy?
     public void nutritionButton1Click(View view) {}
     public void nutritionButton2Click(View view) {}
 }

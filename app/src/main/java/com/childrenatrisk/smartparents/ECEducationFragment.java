@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class HealthFragment extends Fragment {
+public class ECEducationFragment extends Fragment {
 
-    public HealthFragment() {}
+    public ECEducationFragment() {}
 
-    public static HealthFragment newInstance() {
-        HealthFragment fragment = new HealthFragment();
+    public static ECEducationFragment newInstance() {
+        ECEducationFragment fragment = new ECEducationFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -27,15 +27,17 @@ public class HealthFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.fragment_health, container, false);
+        View rootView=inflater.inflate(R.layout.fragment_eceducation, container, false);
         return rootView;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) getActivity()).setActionBarTitle("Health");
+        ((MainActivity) getActivity()).setActionBarTitle("Early Childhood Education");
     }
 
-    public void healthButton1Click(View view) {}    //TODO use local copy?
+    public void ecEducationButton1Click(View view) {}
+    public void ecEducationButton2Click(View view) {}
+    public void ecEducationButton3Click(View view) {}
 }

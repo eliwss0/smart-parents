@@ -5,6 +5,8 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/textInput"
+    tools:ignore="LabelFor"
     tools:context=".NotesFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -16,6 +18,7 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
+        app:backgroundTint="@color/colorPrimary"
         android:src="@drawable/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

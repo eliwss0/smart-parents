@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class EducationFragment extends Fragment {
+public class K12EducationFragment extends Fragment {
 
-    public EducationFragment() {}
+    public K12EducationFragment() {}
 
-    public static EducationFragment newInstance() {
-        EducationFragment fragment = new EducationFragment();
+    public static K12EducationFragment newInstance() {
+        K12EducationFragment fragment = new K12EducationFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -26,16 +26,16 @@ public class EducationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.fragment_education, container, false);
+        View rootView=inflater.inflate(R.layout.fragment_k12education, container, false);
         return rootView;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) getActivity()).setActionBarTitle("Education");
+        ((MainActivity) getActivity()).setActionBarTitle("K-12 Education");
     }
 
-    public void educationButton1Click(View view) {}
-    public void educationButton2Click(View view) {}
+    public void k12EducationButton1Click(View view) {}
+    public void k12EducationButton2Click(View view) {}
 }

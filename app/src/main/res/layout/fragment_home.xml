@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/CaR_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="262dp"
+        android:layout_height="126dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:contentDescription="CaR Logo"
@@ -41,8 +41,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--    TODO transparancy-->
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/smartparents_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

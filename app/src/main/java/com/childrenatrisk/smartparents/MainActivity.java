@@ -65,20 +65,17 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.home_menu:
                         fragment=new HomeFragment();
                         break;
-                    case R.id.health_menu:
-                        fragment=new HealthFragment();
+                    case R.id.health_nutrition_menu:
+                        fragment=new HealthNutritionFragment();
                         break;
-                    case R.id.nutrition_menu:
-                        fragment=new NutritionFragment();
-                        break;
-                    case R.id.education_menu:
-                        fragment=new EducationFragment();
+                    case R.id.k12_education_menu:
+                        fragment=new K12EducationFragment();
                         break;
                     case R.id.child_safety_menu:
                         fragment=new ChildSafetyFragment();
                         break;
-                    case R.id.parenting_menu:
-                        fragment=new ParentingFragment();
+                    case R.id.ec_education_menu:
+                        fragment=new ECEducationFragment();
                         break;
                     case R.id.hotline_menu:
                         fragment=new HotlineFragment();
@@ -193,18 +190,16 @@ public class MainActivity extends AppCompatActivity{
 
     public void onClickTest(View view) {
         SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences(this);
-        Toast.makeText(getApplicationContext(),prefs.getString("state",""),Toast.LENGTH_SHORT).show();
-        Snackbar.make(drawerLayout,prefs.getString("state",""),Snackbar.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),prefs.getString("lang",""),Toast.LENGTH_SHORT).show();
+        Snackbar.make(drawerLayout,prefs.getString("lang",""),Snackbar.LENGTH_SHORT).show();
     }
 
-    //Health
+    //Health and Nutrition
     public void healthButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);  //"https://docs.google.com/gview?embedded=true&url=" opens pdf using google drive pdf viewer
         openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
         startActivity(openWebViewIntent);
     }
-
-    //Nutrition
     public void nutritionButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL", "https://www.feedingamerica.org/find-your-local-foodbank");
@@ -216,15 +211,32 @@ public class MainActivity extends AppCompatActivity{
         startActivity(openWebViewIntent);
     }
 
-    //Education
-    public void educationButton1Click(View view) {
+    //Early Childhood Education
+    public void ecEducationButton1Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://findchildcare.collabforchildren.org/");
+        startActivity(openWebViewIntent);
+    }
+    public void ecEducationButton2Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/state/texas/");
+        startActivity(openWebViewIntent);
+    }
+    public void ecEducationButton3Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://find.frontlinechildcare.texas.gov/parent/dashboard");
+        startActivity(openWebViewIntent);
+    }
+
+    //K-12 Education
+    public void k12EducationButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL","https://texasschoolguide.org");
         startActivity(openWebViewIntent);
     }
-    public void educationButton2Click(View view) {
+    public void k12EducationButton2Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL","http://google.com"); //https://30days.familieslearning.org/ Does not load well on mobile
+        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=http://live.tsg.gfolkdev.net/content/uploads/2017/09/Questions-to-Ask-When-Visiting-a-School.pdf"); //https://30days.familieslearning.org/ Does not load well on mobile
         startActivity(openWebViewIntent);
     }
 
@@ -232,23 +244,6 @@ public class MainActivity extends AppCompatActivity{
     public void childSafetyButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL","https://love146.org/action/online-safety/");
-        startActivity(openWebViewIntent);
-    }
-
-    //Parenting
-    public void parentingButton1Click(View view) {
-        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL","https://findchildcare.collabforchildren.org/");
-        startActivity(openWebViewIntent);
-    }
-    public void parentingButton2Click(View view) {
-        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/state/texas/");
-        startActivity(openWebViewIntent);
-    }
-    public void parentingButton3Click(View view) {
-        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL", "https://find.frontlinechildcare.texas.gov/parent/dashboard");
         startActivity(openWebViewIntent);
     }
 }
