@@ -9,6 +9,9 @@
     <!--    Strings used for fragments for navigation-->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="exit_dialog">Do you wish to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <!--    Toolbar Titles-->
     <string name="home_menu">Home</string>
@@ -19,7 +22,7 @@
     <string name="hotline_menu">Hotlines</string>
     <string name="notes_menu">Notes</string>
 
-    <!--    Web_view menu-->
+    <!--    Web view menu-->
     <string name="close_web_view">Close</string>
     <string name="refresh_web_view">Refresh</string>
     <string name="external_browser">Open in default browser</string>
@@ -31,11 +34,12 @@
     <string name="nutrition_button1_label">Find a food bank</string>
     <string name="nutrition_button2_label">Find school meals</string>
 
-    <!--    Education page-->
+    <!--    K-12 Education page-->
     <string name="k12education_button1_label">Texas School Guide</string>
     <string name="k12education_button2_label">Questions to Ask When Visiting a School</string>
     <string name="k12education_button3_label">Building Gold Ribbon Schools</string>
     <string name="k12education_button4_label">College Ready Checklist</string>
+    <string name="k12education_button5_label">Parent Action Guide</string>
 
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Online safety</string>

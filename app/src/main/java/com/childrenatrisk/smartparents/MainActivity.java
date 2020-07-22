@@ -1,9 +1,8 @@
 package com.childrenatrisk.smartparents;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -22,7 +22,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.preference.PreferenceManager;
 
 import android.util.Log;
 import android.view.Menu;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity{
 
     String lang=Locale.getDefault().getLanguage();
 
-//    TODO descriptions for resources?
+//        TODO descriptions for resources?
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,28 +142,36 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        //TODO confirm exit with toast
-        boolean readyToExit=false;
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             this.drawerLayout.closeDrawer(GravityCompat.START);
-            return;
         }
-        if(getTitle()!="Home") {   //transition to home fragment
+        else if (getSupportActionBar().getTitle()!="Home") {   //transition to home fragment
             FrameLayout f1= findViewById(R.id.nav_host_fragment);
             f1.removeAllViews();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             ft.add(R.id.nav_host_fragment,new HomeFragment());
             ft.commit();
-            getSupportActionBar().setTitle("Home");    //Change if home fragment title changes
-            return;
+            getSupportActionBar().setTitle("Home");
         }
-        if(!readyToExit) {
-            Toast.makeText(getApplication(), "Press back again to exit", Toast.LENGTH_SHORT).show();
-            readyToExit=true;
-
-        }
-        if(readyToExit) {
-
+        else if (getSupportActionBar().getTitle()=="Home") {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(true);
+            builder.setMessage(R.string.exit_dialog);
+            builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            AlertDialog alert = builder.create();
+            alert.show();
         }
         else
             super.onBackPressed();
@@ -183,13 +190,12 @@ public class MainActivity extends AppCompatActivity{
         getSupportActionBar().setTitle(title);
     }
 
-    //click functions for buttons in app TODO try to put functions in respective fragments? Passing view necessary
+    //click functions for buttons in app
     //Home
     public void onClickCaRLogo(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.childrenatrisk.org"));
         startActivity(browserIntent);
     }
-
     public void onClickTest(View view) {
         Toast.makeText(getApplicationContext(),lang,Toast.LENGTH_SHORT).show();
         Snackbar.make(drawerLayout,lang,Snackbar.LENGTH_SHORT).show();
@@ -198,7 +204,7 @@ public class MainActivity extends AppCompatActivity{
     //Health and Nutrition
     public void healthButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);  //"https://docs.google.com/gview?embedded=true&url=" opens pdf using google drive pdf viewer
-        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
+        openWebViewIntent.putExtra("passedURL","https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
         startActivity(openWebViewIntent);
     }
     public void nutritionButton1Click(View view) {
@@ -235,7 +241,7 @@ public class MainActivity extends AppCompatActivity{
     }
     public void ecEducationButton5Click(View view) {    //spanish version?
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL", "https://docs.google.com/gview?embedded=true&url=https://texasschoolguide.org/content/uploads/2018/01/TSG-ChildCareChecklist.pdf");
+        openWebViewIntent.putExtra("passedURL", "https://texasschoolguide.org/content/uploads/2018/01/TSG-ChildCareChecklist.pdf");
         startActivity(openWebViewIntent);
     }
 
@@ -250,20 +256,25 @@ public class MainActivity extends AppCompatActivity{
     }
     public void k12EducationButton2Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=http://live.tsg.gfolkdev.net/content/uploads/2017/09/Questions-to-Ask-When-Visiting-a-School.pdf");
+        openWebViewIntent.putExtra("passedURL","http://live.tsg.gfolkdev.net/content/uploads/2017/09/Questions-to-Ask-When-Visiting-a-School.pdf");
         startActivity(openWebViewIntent);
     }
     public void k12EducationButton3Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         if (lang.substring(0,2).equals("es"))
-            openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://catriskprod.wpengine.com/wp-content/uploads/2019/04/Gold-Ribbon-Blueprint_Spanish_Final.pdf");
+            openWebViewIntent.putExtra("passedURL","https://catriskprod.wpengine.com/wp-content/uploads/2019/04/Gold-Ribbon-Blueprint_Spanish_Final.pdf");
         else
-            openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://catriskprod.wpengine.com/wp-content/uploads/2019/04/Gold-Ribbon-Blueprint_English_Final.pdf");
+            openWebViewIntent.putExtra("passedURL","https://catriskprod.wpengine.com/wp-content/uploads/2019/04/Gold-Ribbon-Blueprint_English_Final.pdf");
         startActivity(openWebViewIntent);
     }
     public void k12EducationButton4Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=http://live.tsg.gfolkdev.net/content/uploads/2017/08/College-Ready-Checklist.pdf");
+        openWebViewIntent.putExtra("passedURL","http://live.tsg.gfolkdev.net/content/uploads/2017/08/College-Ready-Checklist.pdf");
+        startActivity(openWebViewIntent);
+    }
+    public void k12EducationButton5Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://childrenatrisk.org/pag18-19/");
         startActivity(openWebViewIntent);
     }
 

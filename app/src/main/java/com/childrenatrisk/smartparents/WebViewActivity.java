@@ -26,23 +26,21 @@ public class WebViewActivity extends AppCompatActivity {
         Intent intent=getIntent();
         String passedURL=intent.getStringExtra("passedURL");
         setContentView(R.layout.activity_web_view);
-        //TODO use setActionBarTitle depending on link?
 
         webView=findViewById(R.id.web_view);
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true); //if page uses Javascript
+        webSettings.setJavaScriptEnabled(true); //allow Javascript
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.close);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#FFFFFF\">" + "Smart Parents" + "</font>"));   //workaround to get white text in webview
         webView.setDownloadListener(new DownloadListener() {
-            public void onDownloadStart(String url, String userAgent,
-                                        String contentDisposition, String mimetype,
-                                        long contentLength) {
-                Intent i = new Intent(Intent.ACTION_VIEW);
+            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                Intent i=new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+                onBackPressed();    //removes blank page in web view after download
             }
         });
         webView.loadUrl(passedURL);
@@ -89,7 +87,6 @@ public class WebViewActivity extends AppCompatActivity {
                 webView.goForward();
                 return true;
             case android.R.id.home:
-//                mWebContainer.removeAllViews();   Remove webView from parent view
                 webView.clearHistory();
                 webView.onPause();
                 webView.removeAllViews();
