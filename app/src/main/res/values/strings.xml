@@ -28,25 +28,24 @@
     <string name="web_back">Back</string>
 
 
-    <!--    Health page-->
+    <!--    Health and Nutrition page-->
     <string name="health_button1_label">You have rights: Protect your Health</string>
-
-    <!--    Nutrition page-->
     <string name="nutrition_button1_label">Find a food bank</string>
     <string name="nutrition_button2_label">Find school meals</string>
 
     <!--    Education page-->
-    <string name="education_button1_label">Texas School Guide</string>
-    <string name="education_button2_label">Questions to Ask When Visiting a School</string>
+    <string name="k12education_button1_label">Texas School Guide</string>
+    <string name="k12education_button2_label">Questions to Ask When Visiting a School</string>
 
 
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Online safety</string>
 
     <!--    Parenting page-->
-    <string name="parenting_button1_label">Find child care</string>
-    <string name="parenting_button2_label">Childcare Aware Texas</string>
-    <string name="parenting_button3_label">Frontline Child Care Texas</string>
+    <string name="eceducation_button1_label">Find child care</string>
+    <string name="eceducation_button2_label">Childcare Aware Texas</string>
+    <string name="eceducation_button3_label">Frontline Child Care Texas</string>
+    <string name="eceducation_button4_label">Childcare Desert Map</string>
 
     <!--    Hotline page-->
     <string name="non_emergency">Non-emergency Help</string>

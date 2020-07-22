@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:id="@+id/home_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/CaR_logo"
         android:layout_width="262dp"
@@ -30,18 +20,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/car_logo" />
 
+    <!--    TODO transparancy-->
+
     <Button
         android:id="@+id/TEST"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickTest"
         android:text="TEST"
-        app:layout_constraintBottom_toTopOf="@+id/home_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
 
-<!--    TODO transparancy-->
     <ImageView
         android:id="@+id/smartparents_logo"
         android:layout_width="wrap_content"

@@ -3,6 +3,7 @@ package com.childrenatrisk.smartparents;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,7 +32,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity{
+
+    public static String sDefSystemLanguage;
 
     AppBarConfiguration appBarConfiguration;
 
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity{
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
 
-//    TODO resize/recolor icons, descriptions for resources?
+//    TODO descriptions for resources?
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,8 @@ public class MainActivity extends AppCompatActivity{
         NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
+
+        sDefSystemLanguage = Locale.getDefault().getLanguage();
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -177,6 +184,12 @@ public class MainActivity extends AppCompatActivity{
         return super.dispatchTouchEvent(ev);
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        sDefSystemLanguage = newConfig.locale.getLanguage();
+    }
+
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
@@ -225,6 +238,11 @@ public class MainActivity extends AppCompatActivity{
     public void ecEducationButton3Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL", "https://find.frontlinechildcare.texas.gov/parent/dashboard");
+        startActivity(openWebViewIntent);
+    }
+    public void ecEducationButton4Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://childrenatrisk.org/childcaredesertmap/");
         startActivity(openWebViewIntent);
     }
 

@@ -40,4 +40,5 @@ public class ECEducationFragment extends Fragment {
     public void ecEducationButton1Click(View view) {}
     public void ecEducationButton2Click(View view) {}
     public void ecEducationButton3Click(View view) {}
+    public void ecEducationButton4Click(View view) {}
 }

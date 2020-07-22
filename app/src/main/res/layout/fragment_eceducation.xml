@@ -6,46 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".ECEducationFragment">
 
-    <TextView
-        android:id="@+id/textView4"
+    <Button
+        android:id="@+id/eceducation_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ec_education_menu"
+        android:onClick="ecEducationButton1Click"
+        android:text="@string/eceducation_button1_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <Button
+        android:id="@+id/eceducation_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ecEducationButton2Click"
+        android:text="@string/eceducation_button2_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
 
     <Button
-        android:id="@+id/parenting_button1"
+        android:id="@+id/eceducation_button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="parentingButton1Click"
-        android:text="@string/parenting_button1_label"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        android:onClick="ecEducationButton3Click"
+        android:text="@string/eceducation_button3_label"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
 
     <Button
-        android:id="@+id/parenting_button2"
+        android:id="@+id/eceducation_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="parentingButton2Click"
-        android:text="@string/parenting_button2_label"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        android:onClick="ecEducationButton4Click"
+        android:text="@string/eceducation_button4_label"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parenting_button1" />
-
-    <Button
-        android:id="@+id/parenting_button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="parentingButton3Click"
-        android:text="@string/parenting_button3_label"
-        app:layout_constraintBottom_toTopOf="@+id/parenting_button1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
 </androidx.constraintlayout.widget.ConstraintLayout>
