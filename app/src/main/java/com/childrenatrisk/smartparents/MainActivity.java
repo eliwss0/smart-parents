@@ -24,6 +24,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -36,15 +37,14 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity{
 
-    public static String sDefSystemLanguage;
-
     AppBarConfiguration appBarConfiguration;
-
     DrawerLayout drawerLayout;
     NavController navController;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
+
+    String lang=Locale.getDefault().getLanguage();
 
 //    TODO descriptions for resources?
     @Override
@@ -59,8 +59,6 @@ public class MainActivity extends AppCompatActivity{
         NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
-
-        sDefSystemLanguage = Locale.getDefault().getLanguage();
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -124,9 +122,6 @@ public class MainActivity extends AppCompatActivity{
             case R.id.action_about:
                 fragment=new AboutFragment();
                 break;
-            case R.id.action_settings:
-                fragment=new SettingsFragment();
-                break;
             default:
                 break;
         }
@@ -184,12 +179,6 @@ public class MainActivity extends AppCompatActivity{
         return super.dispatchTouchEvent(ev);
     }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        sDefSystemLanguage = newConfig.locale.getLanguage();
-    }
-
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
@@ -202,9 +191,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void onClickTest(View view) {
-        SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences(this);
-        Toast.makeText(getApplicationContext(),prefs.getString("lang",""),Toast.LENGTH_SHORT).show();
-        Snackbar.make(drawerLayout,prefs.getString("lang",""),Snackbar.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),lang,Toast.LENGTH_SHORT).show();
+        Snackbar.make(drawerLayout,lang,Snackbar.LENGTH_SHORT).show();
     }
 
     //Health and Nutrition
@@ -245,16 +233,37 @@ public class MainActivity extends AppCompatActivity{
         openWebViewIntent.putExtra("passedURL", "https://childrenatrisk.org/childcaredesertmap/");
         startActivity(openWebViewIntent);
     }
+    public void ecEducationButton5Click(View view) {    //spanish version?
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://docs.google.com/gview?embedded=true&url=https://texasschoolguide.org/content/uploads/2018/01/TSG-ChildCareChecklist.pdf");
+        startActivity(openWebViewIntent);
+    }
 
     //K-12 Education
     public void k12EducationButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL","https://texasschoolguide.org");
+        if (lang.substring(0,2).equals("es"))
+            openWebViewIntent.putExtra("passedURL","https://guiadelasescuelas.org/");
+        else
+            openWebViewIntent.putExtra("passedURL","https://texasschoolguide.org");
         startActivity(openWebViewIntent);
     }
     public void k12EducationButton2Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=http://live.tsg.gfolkdev.net/content/uploads/2017/09/Questions-to-Ask-When-Visiting-a-School.pdf"); //https://30days.familieslearning.org/ Does not load well on mobile
+        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=http://live.tsg.gfolkdev.net/content/uploads/2017/09/Questions-to-Ask-When-Visiting-a-School.pdf");
+        startActivity(openWebViewIntent);
+    }
+    public void k12EducationButton3Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        if (lang.substring(0,2).equals("es"))
+            openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://catriskprod.wpengine.com/wp-content/uploads/2019/04/Gold-Ribbon-Blueprint_Spanish_Final.pdf");
+        else
+            openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=https://catriskprod.wpengine.com/wp-content/uploads/2019/04/Gold-Ribbon-Blueprint_English_Final.pdf");
+        startActivity(openWebViewIntent);
+    }
+    public void k12EducationButton4Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://docs.google.com/gview?embedded=true&url=http://live.tsg.gfolkdev.net/content/uploads/2017/08/College-Ready-Checklist.pdf");
         startActivity(openWebViewIntent);
     }
 

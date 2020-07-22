@@ -7,7 +7,7 @@
     tools:context=".K12EducationFragment">
 
     <Button
-        android:id="@+id/education_button1"
+        android:id="@+id/k12education_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="k12EducationButton1Click"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.159" />
 
     <Button
-        android:id="@+id/education_button2"
+        android:id="@+id/k12education_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="k12EducationButton2Click"
@@ -28,5 +28,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.298" />
+
+    <Button
+        android:id="@+id/k12education_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="k12EducationButton3Click"
+        android:text="@string/k12education_button3_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.414" />
+
+    <Button
+        android:id="@+id/k12education_button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="k12EducationButton4Click"
+        android:text="@string/k12education_button4_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534" />
 </androidx.constraintlayout.widget.ConstraintLayout>

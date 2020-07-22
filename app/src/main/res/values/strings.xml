@@ -19,14 +19,12 @@
     <string name="hotline_menu">Hotlines</string>
     <string name="notes_menu">Notes</string>
 
-
     <!--    Web_view menu-->
     <string name="close_web_view">Close</string>
     <string name="refresh_web_view">Refresh</string>
     <string name="external_browser">Open in default browser</string>
     <string name="web_forward">Forward</string>
     <string name="web_back">Back</string>
-
 
     <!--    Health and Nutrition page-->
     <string name="health_button1_label">You have rights: Protect your Health</string>
@@ -36,7 +34,8 @@
     <!--    Education page-->
     <string name="k12education_button1_label">Texas School Guide</string>
     <string name="k12education_button2_label">Questions to Ask When Visiting a School</string>
-
+    <string name="k12education_button3_label">Building Gold Ribbon Schools</string>
+    <string name="k12education_button4_label">College Ready Checklist</string>
 
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Online safety</string>
@@ -46,6 +45,7 @@
     <string name="eceducation_button2_label">Childcare Aware Texas</string>
     <string name="eceducation_button3_label">Frontline Child Care Texas</string>
     <string name="eceducation_button4_label">Childcare Desert Map</string>
+    <string name="eceducation_button5_label">Child care checklist</string>
 
     <!--    Hotline page-->
     <string name="non_emergency">Non-emergency Help</string>
@@ -55,10 +55,5 @@
     <string name="parent_hotline">National Parent Hotline - 1-855-427-2736</string>
     <string name="poison_control">Poison Control - 1-800-222-1222</string>
     <string name="human_trafficking_hotline">Human Trafficking Hotline - 1-888-373-7888</string>
-
-
-
-    <!--    Settings-->
-    <string name="settings_lang_selection_label">Language</string>
 
 </resources>
