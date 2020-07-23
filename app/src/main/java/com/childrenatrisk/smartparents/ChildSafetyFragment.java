@@ -25,8 +25,7 @@ public class ChildSafetyFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView=inflater.inflate(R.layout.fragment_child_safety, container, false);
         return rootView;
     }
@@ -38,4 +37,5 @@ public class ChildSafetyFragment extends Fragment {
     }
 
     public void childSafetyButton1Click(View view) {}
+    public void childSafetyButton2Click(View view) {}
 }

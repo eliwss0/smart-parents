@@ -196,15 +196,20 @@ public class MainActivity extends AppCompatActivity{
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.childrenatrisk.org"));
         startActivity(browserIntent);
     }
-    public void onClickTest(View view) {
-        Toast.makeText(getApplicationContext(),lang,Toast.LENGTH_SHORT).show();
-        Snackbar.make(drawerLayout,lang,Snackbar.LENGTH_SHORT).show();
+    public void onClickSmartParents(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://smartparents.org/"));
+        startActivity(browserIntent);
     }
 
     //Health and Nutrition
     public void healthButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);  //"https://docs.google.com/gview?embedded=true&url=" opens pdf using google drive pdf viewer
         openWebViewIntent.putExtra("passedURL","https://protectingimmigrantfamilies.org/wp-content/uploads/2020/02/You-Have-Rights-Protect-Your-Health-Updated-February-2020-ENGLISH.pdf");
+        startActivity(openWebViewIntent);
+    }
+    public void healthButton2Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://www.cdc.gov/parents/");
         startActivity(openWebViewIntent);
     }
     public void nutritionButton1Click(View view) {
@@ -226,7 +231,7 @@ public class MainActivity extends AppCompatActivity{
     }
     public void ecEducationButton2Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
-        openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/state/texas/");
+        openWebViewIntent.putExtra("passedURL", "https://www.childcareaware.org/");
         startActivity(openWebViewIntent);
     }
     public void ecEducationButton3Click(View view) {
@@ -282,6 +287,11 @@ public class MainActivity extends AppCompatActivity{
     public void childSafetyButton1Click(View view) {
         Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
         openWebViewIntent.putExtra("passedURL","https://love146.org/action/online-safety/");
+        startActivity(openWebViewIntent);
+    }
+    public void childSafetyButton2Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://www.usfa.fema.gov/prevention/outreach/children.html");
         startActivity(openWebViewIntent);
     }
 }

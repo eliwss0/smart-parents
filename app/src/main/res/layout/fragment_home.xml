@@ -6,43 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <!--    TODO transparancy-->
+
     <ImageView
         android:id="@+id/CaR_logo"
         android:layout_width="262dp"
         android:layout_height="126dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="48dp"
         android:clickable="true"
-        android:contentDescription="CaR Logo"
+        android:contentDescription="@string/org_name"
         android:focusable="true"
         android:onClick="onClickCaRLogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/car_logo" />
 
-    <!--    TODO transparancy-->
-
-    <Button
-        android:id="@+id/TEST"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickTest"
-        android:text="TEST"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
-
     <ImageView
         android:id="@+id/smartparents_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="355dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="onClickSmartParents"
         android:src="@drawable/smartparents_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Visit the full website"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/smartparents_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Powered by"
+        app:layout_constraintBottom_toTopOf="@+id/CaR_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

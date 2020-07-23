@@ -19,7 +19,7 @@
         android:icon="@drawable/home"
         android:title="@string/child_safety_menu" />
     <item android:id="@+id/hotline_menu"
-        android:icon="@drawable/back"
+        android:icon="@drawable/phone"
         android:title="@string/hotline_menu" />
     <item android:id="@+id/notes_menu"
         android:icon="@drawable/notes"

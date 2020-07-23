@@ -34,7 +34,7 @@ public class WebViewActivity extends AppCompatActivity {
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.close);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#FFFFFF\">" + "Smart Parents" + "</font>"));   //workaround to get white text in webview
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#FFFFFF\">" + "Smart Parents" + "</font>"));   //workaround to get white text in web view title
         webView.setDownloadListener(new DownloadListener() {
             public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
                 Intent i=new Intent(Intent.ACTION_VIEW);

@@ -37,7 +37,8 @@ public class HealthNutritionFragment extends Fragment {
         ((MainActivity) getActivity()).setActionBarTitle("Health and Nutrition");
     }
 
-    public void healthButton1Click(View view) {}    //TODO use local copy?
+    public void healthButton1Click(View view) {}
+    public void healthButton2Click(View view) {}
     public void nutritionButton1Click(View view) {}
     public void nutritionButton2Click(View view) {}
 }

@@ -39,5 +39,5 @@ public class HomeFragment extends Fragment {
 
     //Refuses to use in HomeFragment, only uses in MainActivity
     public void onClickCaRLogo(View view) {}
-    public void onClickTest(View view) {}
+    public void onClickSmartParents(View view) {}
 }
