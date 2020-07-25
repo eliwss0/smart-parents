@@ -49,7 +49,7 @@
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Child safety online</string>
     <string name="child_safety_button2_label">Fire safety</string>
-
+    <string name="child_safety_button3_label">Swimming and water safety</string>
 
     <!--    Parenting page-->
     <string name="eceducation_button1_label">Find child care</string>
@@ -62,8 +62,11 @@
     <string name="non_emergency">Non-emergency Help</string>
     <string name="emergency">Emergency Help</string>
     <string name="emergency_call">In a life threatening emergency, call 911</string>
-    <string name="parent_hotline">National Parent Hotline - 1-855-427-2736</string>
-    <string name="poison_control">Poison Control - 1-800-222-1222</string>
-    <string name="human_trafficking_hotline">Human Trafficking Hotline - 1-888-373-7888</string>
+    <string name="parent_hotline_label">National Parent Hotline</string>
+    <string name="parent_hotline_number">1–855–427–2736</string>
+    <string name="poison_control_label">Poison Control</string>
+    <string name="poison_control_number">1–800–222–1222</string>
+    <string name="human_trafficking_hotline_label">Human Trafficking Hotline</string>
+    <string name="human_trafficking_hotline_number">1–888–373–7888</string>
 
 </resources>

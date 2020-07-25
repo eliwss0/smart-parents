@@ -38,4 +38,5 @@ public class ChildSafetyFragment extends Fragment {
 
     public void childSafetyButton1Click(View view) {}
     public void childSafetyButton2Click(View view) {}
+    public void childSafetyButton3Click(View view) {}
 }

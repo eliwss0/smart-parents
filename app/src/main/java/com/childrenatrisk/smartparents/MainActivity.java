@@ -294,4 +294,9 @@ public class MainActivity extends AppCompatActivity{
         openWebViewIntent.putExtra("passedURL","https://www.usfa.fema.gov/prevention/outreach/children.html");
         startActivity(openWebViewIntent);
     }
+    public void childSafetyButton3Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL","https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/water-safety.html");
+        startActivity(openWebViewIntent);
+    }
 }

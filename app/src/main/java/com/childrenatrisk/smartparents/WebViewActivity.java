@@ -46,8 +46,7 @@ public class WebViewActivity extends AppCompatActivity {
         webView.loadUrl(passedURL);
     }
 
-    public class WebViewClient extends android.webkit.WebViewClient
-    {
+    public class WebViewClient extends android.webkit.WebViewClient {
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
