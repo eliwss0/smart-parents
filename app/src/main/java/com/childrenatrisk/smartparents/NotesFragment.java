@@ -34,7 +34,6 @@ public class NotesFragment extends Fragment {
     }
 
     //TODO better switch between notes and other fragments
-    //TODO dismiss keyboard on outside tap or other input
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +63,6 @@ public class NotesFragment extends Fragment {
         });
         return view;
     }
-
 
     @Override
     public void onResume() {

@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/textInput"
-    tools:ignore="LabelFor"
-    tools:context=".NotesFragment">
+    tools:context=".NotesFragment"
+    tools:ignore="LabelFor">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/save_notes_fab"
@@ -18,8 +18,8 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
-        app:backgroundTint="@color/colorPrimary"
         android:src="@drawable/save"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -29,7 +29,9 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:inputType="textLongMessage|textMultiLine"
+        android:hint="@string/notes_tooltip_entry"
+        android:inputType="textLongMessage|textMultiLine|textImeMultiLine"
+        android:textColorHint="#FFAAAAAA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

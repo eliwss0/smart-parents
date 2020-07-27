@@ -2,7 +2,6 @@
     <string name="app_name">Smart Parents</string>
     <string name="org_name">Children At Risk</string>
     <string name="action_about">About</string>
-
     <string name="navigation_drawer_open">navdrawer open</string>
     <string name="navigation_drawer_close">navdrawer close</string>
 
@@ -23,8 +22,8 @@
     <string name="notes_menu">Notes</string>
 
     <!--    About page-->
-    <string name="about_app_region">This app is primarily targeted at Texas parents. Many of the resources provided are applicable to areas outside Texas, but some
-        are specifically relevant to Texas. Please keep this in mind while using the app.</string>
+    <string name="about_app_region">This app is primarily targeted at Texas parents. Many of the resources provided
+        are applicable to areas outside Texas, but some are specifically relevant to Texas. Please keep this in mind.</string>
 
     <!--    Web view menu-->
     <string name="close_web_view">Close</string>
@@ -36,8 +35,8 @@
     <!--    Health and Nutrition page-->
     <string name="health_button1_label">You have rights: Protect your Health</string>
     <string name="health_button2_label">CDC Parenting Information</string>
-    <string name="nutrition_button1_label">Find a food bank</string>
-    <string name="nutrition_button2_label">Find school meals</string>
+    <string name="nutrition_button1_label">Find a Food Bank</string>
+    <string name="nutrition_button2_label">Find School Meals</string>
 
     <!--    K-12 Education page-->
     <string name="k12education_button1_label">Texas School Guide</string>
@@ -47,26 +46,29 @@
     <string name="k12education_button5_label">Parent Action Guide</string>
 
     <!--    Child Safety page-->
-    <string name="child_safety_button1_label">Child safety online</string>
-    <string name="child_safety_button2_label">Fire safety</string>
-    <string name="child_safety_button3_label">Swimming and water safety</string>
+    <string name="child_safety_button1_label">Child Safety Online</string>
+    <string name="child_safety_button2_label">Fire Safety</string>
+    <string name="child_safety_button3_label">Swimming and Water Safety</string>
 
     <!--    Parenting page-->
     <string name="eceducation_button1_label">Find child care</string>
     <string name="eceducation_button2_label">Childcare Aware Texas</string>
     <string name="eceducation_button3_label">Frontline Child Care Texas</string>
     <string name="eceducation_button4_label">Childcare Desert Map</string>
-    <string name="eceducation_button5_label">Child care checklist</string>
+    <string name="eceducation_button5_label">Child Care Checklist</string>
 
     <!--    Hotline page-->
     <string name="non_emergency">Non-emergency Help</string>
     <string name="emergency">Emergency Help</string>
     <string name="emergency_call">In a life threatening emergency, call 911</string>
-    <string name="parent_hotline_label">National Parent Hotline</string>
+    <string name="parent_hotline_label">National Parent Helpline</string>
     <string name="parent_hotline_number">1–855–427–2736</string>
     <string name="poison_control_label">Poison Control</string>
     <string name="poison_control_number">1–800–222–1222</string>
     <string name="human_trafficking_hotline_label">Human Trafficking Hotline</string>
     <string name="human_trafficking_hotline_number">1–888–373–7888</string>
+
+    <!--    Notes page-->
+    <string name="notes_tooltip_entry">Type your notes here\nTo save your notes press the button in the bottom right corner</string>
 
 </resources>

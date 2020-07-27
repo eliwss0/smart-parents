@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(MenuItem item) {
                 int id = item.getItemId();
                 Fragment fragment=null;
-                switch (id) {   //Fragments should be activities, change if possible after feature complete
+                switch (id) {
                     case R.id.home_menu:
                         fragment=new HomeFragment();
                         break;
