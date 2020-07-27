@@ -33,7 +33,6 @@ public class NotesFragment extends Fragment {
         return fragment;
     }
 
-    //TODO better switch between notes and other fragments
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,15 +48,13 @@ public class NotesFragment extends Fragment {
         fabSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!notesField.getText().toString().isEmpty()) {
-                    try {
-                        writeNotesFile(getActivity(), notesField.getText().toString());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    if (fileExists(getActivity(),"notes.txt")) {
-                        Toast.makeText(getActivity(), "Saved notes", Toast.LENGTH_SHORT).show();
-                    }
+                try {
+                    writeNotesFile(getActivity(), notesField.getText().toString());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (fileExists(getActivity(),"notes.txt")) {
+                    Toast.makeText(getActivity(), "Saved notes", Toast.LENGTH_SHORT).show();
                 }
             }
         });

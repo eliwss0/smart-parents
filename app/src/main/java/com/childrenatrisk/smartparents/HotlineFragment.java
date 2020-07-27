@@ -25,7 +25,6 @@ public class HotlineFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //TODO message or information about hotlines (governmental or independent, immigration status concerns, encourage calling if unsure)
     }
 
     @Override
