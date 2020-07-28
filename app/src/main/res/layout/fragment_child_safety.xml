@@ -10,7 +10,7 @@
         android:id="@+id/child_safety_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:onClick="childSafetyButton1Click"
         android:text="@string/child_safety_button1_label"
         app:layout_constraintEnd_toEndOf="@+id/child_safety_button2"
@@ -32,11 +32,41 @@
         android:id="@+id/child_safety_button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:onClick="childSafetyButton3Click"
         android:text="@string/child_safety_button3_label"
         app:layout_constraintEnd_toEndOf="@+id/child_safety_button1"
         app:layout_constraintStart_toStartOf="@+id/child_safety_button1"
         app:layout_constraintTop_toBottomOf="@+id/child_safety_button1" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/child_safety_button2"
+        app:layout_constraintStart_toStartOf="@+id/child_safety_button2"
+        app:layout_constraintTop_toBottomOf="@+id/child_safety_button2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/child_safety_button1"
+        app:layout_constraintStart_toStartOf="@+id/child_safety_button1"
+        app:layout_constraintTop_toBottomOf="@+id/child_safety_button1" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/child_safety_button3"
+        app:layout_constraintStart_toStartOf="@+id/child_safety_button3"
+        app:layout_constraintTop_toBottomOf="@+id/child_safety_button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

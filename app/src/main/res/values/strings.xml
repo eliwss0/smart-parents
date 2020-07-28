@@ -24,6 +24,8 @@
     <!--    About page-->
     <string name="about_app_region">This app is primarily targeted at Texas parents. Many of the resources provided
         are applicable to areas outside Texas, but some are specifically relevant to Texas. Please keep this in mind.</string>
+    <string name="legal_info">TODO: LEGAL INFO</string>
+    <string name="about_org">TODO: ABOUT C@R</string>
 
     <!--    Web view menu-->
     <string name="close_web_view">Close</string>
@@ -41,6 +43,7 @@
     <string name="health_button2_label">CDC Parenting Information</string>
     <string name="nutrition_button1_label">Find a Food Bank</string>
     <string name="nutrition_button2_label">Find School Meals</string>
+    <string name="todo_desc">TODO: Button description</string>
 
     <!--    K-12 Education page-->
     <string name="k12education_button1_label">Texas School Guide</string>
@@ -62,11 +65,13 @@
     <string name="eceducation_button5_label">Child Care Checklist</string>
 
     <!--    Hotline page-->
-    <string name="non_emergency">Non-emergency Help</string>
     <string name="emergency">Emergency Help</string>
     <string name="emergency_call">In a life threatening emergency, call 911</string>
+    <string name="non_emergency">Non-emergency Help</string>
+    <string name="government_affiliation">TODO: GOV\'T AFFILIATION</string>
     <string name="parent_hotline_label">National Parent Helpline</string>
     <string name="parent_hotline_number">1–855–427–2736</string>
+    <string name="parent_hotline_times">Available M-F 10am-7pm PST</string>
     <string name="poison_control_label">Poison Control</string>
     <string name="poison_control_number">1–800–222–1222</string>
     <string name="human_trafficking_hotline_label">Human Trafficking Hotline</string>

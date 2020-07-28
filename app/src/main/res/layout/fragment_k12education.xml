@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".K12EducationFragment">
 
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/k12education_button5"
+        app:layout_constraintStart_toStartOf="@+id/k12education_button5"
+        app:layout_constraintTop_toBottomOf="@+id/k12education_button5" />
+
     <Button
         android:id="@+id/k12education_button1"
         android:layout_width="wrap_content"
@@ -21,7 +31,7 @@
         android:id="@+id/k12education_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:onClick="k12EducationButton2Click"
         android:text="@string/k12education_button2_label"
         app:layout_constraintEnd_toEndOf="@+id/k12education_button1"
@@ -32,7 +42,7 @@
         android:id="@+id/k12education_button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:onClick="k12EducationButton3Click"
         android:text="@string/k12education_button3_label"
         app:layout_constraintEnd_toEndOf="@+id/k12education_button2"
@@ -43,7 +53,7 @@
         android:id="@+id/k12education_button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:onClick="k12EducationButton4Click"
         android:text="@string/k12education_button4_label"
         app:layout_constraintEnd_toEndOf="@+id/k12education_button3"
@@ -54,9 +64,49 @@
         android:id="@+id/k12education_button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:onClick="k12EducationButton5Click"
         android:text="@string/k12education_button5_label"
+        app:layout_constraintEnd_toEndOf="@+id/k12education_button4"
+        app:layout_constraintStart_toStartOf="@+id/k12education_button4"
+        app:layout_constraintTop_toBottomOf="@+id/k12education_button4" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/k12education_button1"
+        app:layout_constraintStart_toStartOf="@+id/k12education_button1"
+        app:layout_constraintTop_toBottomOf="@+id/k12education_button1" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/k12education_button2"
+        app:layout_constraintStart_toStartOf="@+id/k12education_button2"
+        app:layout_constraintTop_toBottomOf="@+id/k12education_button2" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
+        app:layout_constraintEnd_toEndOf="@+id/k12education_button3"
+        app:layout_constraintStart_toStartOf="@+id/k12education_button3"
+        app:layout_constraintTop_toBottomOf="@+id/k12education_button3" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/todo_desc"
         app:layout_constraintEnd_toEndOf="@+id/k12education_button4"
         app:layout_constraintStart_toStartOf="@+id/k12education_button4"
         app:layout_constraintTop_toBottomOf="@+id/k12education_button4" />
