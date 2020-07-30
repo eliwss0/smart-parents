@@ -84,7 +84,7 @@
         android:id="@+id/eceducation_button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="16dp"
         android:onClick="ecEducationButton5Click"
         android:text="@string/eceducation_button5_label"
         app:layout_constraintEnd_toEndOf="parent"
