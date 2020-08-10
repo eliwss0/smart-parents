@@ -1,7 +1,5 @@
-<p>Android companion app to the website https://smartparents.org </p>
+# Smart Parents
 
-<p>This app is meant to be used as a central collection of resources for parents in Texas. Many of these resources also work across the United States, but be aware that some are specific to Texas.
+<p>This Android app is meant to serve as a companion app to the website https://smartparents.org. It serves as a collection of online resources from publicly available sources in a more easily accessible format than a mobile website.</p>
 
-Additional resources used from:
-
-<https://material.io></p>
+<p>This app is primarily targeted at Texas parents. Many of the resources provided are applicable to areas outside Texas, but some are specifically relevant to Texas. Please keep this in mind.
