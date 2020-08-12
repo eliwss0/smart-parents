@@ -40,31 +40,31 @@
         app:layout_constraintTop_toBottomOf="@+id/child_safety_button1" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/child_safety_button2_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/child_safety_button1_desc"
         app:layout_constraintEnd_toEndOf="@+id/child_safety_button2"
         app:layout_constraintStart_toStartOf="@+id/child_safety_button2"
         app:layout_constraintTop_toBottomOf="@+id/child_safety_button2" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/child_safety_button1_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/child_safety_button2_desc"
         app:layout_constraintEnd_toEndOf="@+id/child_safety_button1"
         app:layout_constraintStart_toStartOf="@+id/child_safety_button1"
         app:layout_constraintTop_toBottomOf="@+id/child_safety_button1" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/child_safety_button3_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/child_safety_button3_desc"
         app:layout_constraintEnd_toEndOf="@+id/child_safety_button3"
         app:layout_constraintStart_toStartOf="@+id/child_safety_button3"
         app:layout_constraintTop_toBottomOf="@+id/child_safety_button3" />

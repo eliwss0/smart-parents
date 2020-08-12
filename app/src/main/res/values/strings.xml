@@ -9,8 +9,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="exit_dialog">Do you wish to exit?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
 
     <!--    Toolbar Titles-->
     <string name="home_menu">Home</string>
@@ -43,7 +43,13 @@
     <string name="health_button2_label">CDC Parenting Information</string>
     <string name="nutrition_button1_label">Find a Food Bank</string>
     <string name="nutrition_button2_label">Find School Meals</string>
-    <string name="todo_desc">TODO: Button description</string>
+    <string name="nutrition_button3_label">No-Cost Meals for\n Kids in Houston</string>
+
+    <string name="health_button1_desc">TODO: Button description</string>
+    <string name="health_button2_desc">TODO: Button description</string>
+    <string name="nutrition_button1_desc">TODO: Button description</string>
+    <string name="nutrition_button2_desc">TODO: Button description</string>
+    <string name="nutrition_button3_desc">TODO: Button description</string>
 
     <!--    K-12 Education page-->
     <string name="k12education_button1_label">Texas School Guide</string>
@@ -52,10 +58,20 @@
     <string name="k12education_button4_label">College Ready Checklist</string>
     <string name="k12education_button5_label">Parent Action Guide</string>
 
+    <string name="k12education_button1_desc">TODO: Button description</string>
+    <string name="k12education_button2_desc">TODO: Button description</string>
+    <string name="k12education_button3_desc">TODO: Button description</string>
+    <string name="k12education_button4_desc">TODO: Button description</string>
+    <string name="k12education_button5_desc">TODO: Button description</string>
+
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Child Safety Online</string>
     <string name="child_safety_button2_label">Fire Safety</string>
     <string name="child_safety_button3_label">Swimming and Water Safety</string>
+
+    <string name="child_safety_button1_desc">TODO: Button description</string>
+    <string name="child_safety_button2_desc">TODO: Button description</string>
+    <string name="child_safety_button3_desc">TODO: Button description</string>
 
     <!--    Parenting page-->
     <string name="eceducation_button1_label">Find child care</string>
@@ -64,10 +80,19 @@
     <string name="eceducation_button4_label">Childcare Desert Map</string>
     <string name="eceducation_button5_label">Child Care Checklist</string>
 
+    <string name="eceducation_button1_desc">TODO: Button description</string>
+    <string name="eceducation_button2_desc">TODO: Button description</string>
+    <string name="eceducation_button3_desc">TODO: Button description</string>
+    <string name="eceducation_button4_desc">TODO: Button description</string>
+    <string name="eceducation_button5_desc">TODO: Button description</string>
+
+    <!--    COVID-19 page-->
+<!--    <string name="covid_button1_label">BLAH</string>-->
+
     <!--    Hotline page-->
-    <string name="emergency">Emergency Help</string>
-    <string name="emergency_call">In a life threatening emergency, call 911</string>
-    <string name="non_emergency">Non-emergency Help</string>
+    <string name="emergency_title">Emergency Help</string>
+    <string name="emergency_call">In a life threatening emergency, call 911.</string>
+    <string name="non_emergency_title">Non-emergency Help</string>
     <string name="government_affiliation">TODO: GOV\'T AFFILIATION</string>
     <string name="parent_hotline_label">National Parent Helpline</string>
     <string name="parent_hotline_number">1–855–427–2736</string>

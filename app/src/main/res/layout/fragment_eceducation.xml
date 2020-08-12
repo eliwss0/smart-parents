@@ -7,31 +7,31 @@
     tools:context=".ECEducationFragment">
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/eceducation_button3_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/eceducation_button3_desc"
         app:layout_constraintEnd_toEndOf="@+id/eceducation_button3"
         app:layout_constraintStart_toStartOf="@+id/eceducation_button3"
         app:layout_constraintTop_toBottomOf="@+id/eceducation_button3" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/eceducation_button4_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/eceducation_button4_desc"
         app:layout_constraintEnd_toEndOf="@+id/eceducation_button4"
         app:layout_constraintStart_toStartOf="@+id/eceducation_button4"
         app:layout_constraintTop_toBottomOf="@+id/eceducation_button4" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/eceducation_button2_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/eceducation_button2_desc"
         app:layout_constraintEnd_toEndOf="@+id/eceducation_button2"
         app:layout_constraintStart_toStartOf="@+id/eceducation_button2"
         app:layout_constraintTop_toBottomOf="@+id/eceducation_button2" />
@@ -92,21 +92,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/eceducation_button5_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/eceducation_button5_desc"
         app:layout_constraintEnd_toEndOf="@+id/eceducation_button5"
         app:layout_constraintStart_toStartOf="@+id/eceducation_button5"
         app:layout_constraintTop_toBottomOf="@+id/eceducation_button5" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/eceducation_button1_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/todo_desc"
+        android:text="@string/eceducation_button1_desc"
         app:layout_constraintEnd_toEndOf="@+id/eceducation_button1"
         app:layout_constraintStart_toStartOf="@+id/eceducation_button1"
         app:layout_constraintTop_toBottomOf="@+id/eceducation_button1" />
