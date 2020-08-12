@@ -41,4 +41,5 @@ public class HealthNutritionFragment extends Fragment {
     public void healthButton2Click(View view) {}
     public void nutritionButton1Click(View view) {}
     public void nutritionButton2Click(View view) {}
+    public void nutritionButton3Click(View view) {}
 }

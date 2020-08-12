@@ -222,6 +222,11 @@ public class MainActivity extends AppCompatActivity{
         openWebViewIntent.putExtra("passedURL", "https://schoolmealfinder.hoonuit.com/");
         startActivity(openWebViewIntent);
     }
+    public void nutritionButton3Click(View view) {
+        Intent openWebViewIntent=new Intent(MainActivity.this, WebViewActivity.class);
+        openWebViewIntent.putExtra("passedURL", "https://smartparents.org/houston-meals/");
+        startActivity(openWebViewIntent);
+    }
 
     //Early Childhood Education
     public void ecEducationButton1Click(View view) {
