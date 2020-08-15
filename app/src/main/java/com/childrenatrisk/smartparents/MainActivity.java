@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity{
             this.drawerLayout.closeDrawer(GravityCompat.START);
         }
         else if (getSupportActionBar().getTitle()!="Home") {   //transition to home fragment
-            FrameLayout f1= findViewById(R.id.nav_host_fragment);
+            FrameLayout f1 = findViewById(R.id.nav_host_fragment);
             f1.removeAllViews();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
@@ -158,13 +158,13 @@ public class MainActivity extends AppCompatActivity{
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(true);
             builder.setMessage(R.string.exit_dialog);
-            builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(R.string.dialog_yes, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     finish();
                 }
             });
-            builder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            builder.setNegativeButton(R.string.dialog_no, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();

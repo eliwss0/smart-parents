@@ -44,7 +44,6 @@ public class NotesFragment extends Fragment {
         FloatingActionButton fabSave=view.findViewById(R.id.save_notes_fab);
         notesField = view.findViewById(R.id.notes_input);
         notesField.setText(readNotesFile(getActivity(),"notes.txt"));
-
         fabSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,6 +57,7 @@ public class NotesFragment extends Fragment {
                 }
             }
         });
+        fabSave.bringToFront();
         return view;
     }
 
