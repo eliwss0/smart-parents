@@ -57,23 +57,23 @@
                 android:id="@+id/parent_hotline_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="124dp"
-                android:layout_marginRight="124dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
                 android:text="@string/parent_hotline_label"
                 app:layout_constraintBottom_toBottomOf="@+id/parent_hotline_number"
                 app:layout_constraintEnd_toEndOf="@+id/emergency_title"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/non_emergency_title"
                 app:layout_constraintTop_toTopOf="@+id/parent_hotline_number"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/poison_control_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
                 android:text="@string/poison_control_label"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
                 app:layout_constraintTop_toTopOf="@+id/textView4"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -111,13 +111,13 @@
                 android:id="@+id/parent_hotline_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="128dp"
-                android:layout_marginLeft="128dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="156dp"
+                android:layout_marginLeft="156dp"
+                android:layout_marginTop="36dp"
                 android:autoLink="phone"
                 android:linksClickable="true"
                 android:text="@string/parent_hotline_number"
-                app:layout_constraintStart_toStartOf="@+id/government_affiliation_text"
+                app:layout_constraintStart_toStartOf="@+id/non_emergency_title"
                 app:layout_constraintTop_toBottomOf="@+id/government_affiliation_text" />
 
             <TextView

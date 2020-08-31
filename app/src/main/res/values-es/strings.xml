@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="yes">Sí</string>
-    <string name="no">No</string>
+    <string name="app_name">Smart Parents</string>
+    <string name="dialog_yes">Sí</string>
+    <string name="dialog_no">No</string>
 </resources>

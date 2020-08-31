@@ -24,8 +24,9 @@
     <!--    About page-->
     <string name="about_app_region">This app is primarily targeted at Texas parents. Many of the resources provided
         are applicable to areas outside Texas, but some are specifically relevant to Texas. Please keep this in mind.</string>
-    <string name="legal_info">TODO: LEGAL INFO</string>
-    <string name="about_org">TODO: ABOUT C@R</string>
+    <string name="legal_info">All copyrights belong to their respective owners. Programed by Eli Weiss for Children at Risk.</string>
+    <string name="about_org">CHILDREN AT RISK serves as a catalyst for change to improve the quality of life for children
+        through research, policy analysis, education, collaboration, and advocacy.</string>
 
     <!--    Web view menu-->
     <string name="close_web_view">Close</string>
@@ -45,11 +46,11 @@
     <string name="nutrition_button2_label">Find School Meals</string>
     <string name="nutrition_button3_label">No-Cost Meals for\n Kids in Houston</string>
 
-    <string name="health_button1_desc">TODO: Button description</string>
-    <string name="health_button2_desc">TODO: Button description</string>
-    <string name="nutrition_button1_desc">TODO: Button description</string>
-    <string name="nutrition_button2_desc">TODO: Button description</string>
-    <string name="nutrition_button3_desc">TODO: Button description</string>
+    <string name="health_button1_desc">Health information and resources for immigrant families.</string>
+    <string name="health_button2_desc">A collection of CDC suggested health resources for parents</string>
+    <string name="nutrition_button1_desc">Find your local food bank by entering your zip code and state at this webpage.</string>
+    <string name="nutrition_button2_desc">Find school meals near you using this interactive map</string>
+    <string name="nutrition_button3_desc">Find locations with no-cost meals for children in Houston</string>
 
     <!--    K-12 Education page-->
     <string name="k12education_button1_label">Texas School Guide</string>
@@ -58,20 +59,20 @@
     <string name="k12education_button4_label">College Ready Checklist</string>
     <string name="k12education_button5_label">Parent Action Guide</string>
 
-    <string name="k12education_button1_desc">TODO: Button description</string>
-    <string name="k12education_button2_desc">TODO: Button description</string>
-    <string name="k12education_button3_desc">TODO: Button description</string>
-    <string name="k12education_button4_desc">TODO: Button description</string>
-    <string name="k12education_button5_desc">TODO: Button description</string>
+    <string name="k12education_button1_desc">Want to Know the Quality of Schools Near You? Use this tool to search and compare Texas schools.</string>
+    <string name="k12education_button2_desc">A list of questions for parents to ask while visiting schools.</string>
+    <string name="k12education_button3_desc">Quality school practices that can be adopted by campuses and that parents can advocate for. </string>
+    <string name="k12education_button4_desc">This checklist helps parents track actions to support children throughout their education by grade.</string>
+    <string name="k12education_button5_desc">This guide provides tips and actions parents can take to support their child’s academic success.</string>
 
     <!--    Child Safety page-->
     <string name="child_safety_button1_label">Child Safety Online</string>
     <string name="child_safety_button2_label">Fire Safety</string>
     <string name="child_safety_button3_label">Swimming and Water Safety</string>
 
-    <string name="child_safety_button1_desc">TODO: Button description</string>
-    <string name="child_safety_button2_desc">TODO: Button description</string>
-    <string name="child_safety_button3_desc">TODO: Button description</string>
+    <string name="child_safety_button1_desc">Keeping kids safe from fires: materials to learn more about discussing fire safety with children.</string>
+    <string name="child_safety_button2_desc">Some good rules of thumb for parents to ensure their children’s safety online.</string>
+    <string name="child_safety_button3_desc">Water safety resources for families and children.</string>
 
     <!--    Parenting page-->
     <string name="eceducation_button1_label">Find child care</string>
@@ -80,11 +81,11 @@
     <string name="eceducation_button4_label">Childcare Desert Map</string>
     <string name="eceducation_button5_label">Child Care Checklist</string>
 
-    <string name="eceducation_button1_desc">TODO: Button description</string>
-    <string name="eceducation_button2_desc">TODO: Button description</string>
-    <string name="eceducation_button3_desc">TODO: Button description</string>
-    <string name="eceducation_button4_desc">TODO: Button description</string>
-    <string name="eceducation_button5_desc">TODO: Button description</string>
+    <string name="eceducation_button1_desc">Find a child care center or home near you.</string>
+    <string name="eceducation_button2_desc">Local CCR&amp;Rs can help families find child care options near their home or work.</string>
+    <string name="eceducation_button3_desc">This portal help frontline essential workers find available child care near their home or work.</string>
+    <string name="eceducation_button4_desc">View this map to explore child care deserts and the access landscape across the state of Texas.</string>
+    <string name="eceducation_button5_desc">This checklist will help you recognize quality and make informed decisions when choosing child care.</string>
 
     <!--    COVID-19 page-->
 <!--    <string name="covid_button1_label">BLAH</string>-->
@@ -93,7 +94,7 @@
     <string name="emergency_title">Emergency Help</string>
     <string name="emergency_call">In a life threatening emergency, call 911.</string>
     <string name="non_emergency_title">Non-emergency Help</string>
-    <string name="government_affiliation">TODO: GOV\'T AFFILIATION</string>
+    <string name="government_affiliation">Contact information listed belong to not-for-profit organizations and are not government agencies or government affiliated.</string>
     <string name="parent_hotline_label">National Parent Helpline</string>
     <string name="parent_hotline_number">1–855–427–2736</string>
     <string name="parent_hotline_times">Available M-F 10am-7pm PST</string>
