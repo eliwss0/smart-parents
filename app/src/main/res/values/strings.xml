@@ -24,7 +24,7 @@
     <!--    About page-->
     <string name="about_app_region">This app is primarily targeted at Texas parents. Many of the resources provided
         are applicable to areas outside Texas, but some are specifically relevant to Texas. Please keep this in mind.</string>
-    <string name="legal_info">All copyrights belong to their respective owners. Programed by Eli Weiss for Children at Risk.</string>
+    <string name="legal_info">All copyrights belong to their respective owners.\nProgramed by Eli Weiss for Children at Risk.</string>
     <string name="about_org">CHILDREN AT RISK serves as a catalyst for change to improve the quality of life for children
         through research, policy analysis, education, collaboration, and advocacy.</string>
 

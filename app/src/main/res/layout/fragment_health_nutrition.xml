@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
                 android:text="@string/nutrition_button1_desc"
                 app:layout_constraintEnd_toEndOf="@+id/nutrition_button1"
                 app:layout_constraintStart_toStartOf="@+id/nutrition_button1"
@@ -78,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
                 android:text="@string/health_button1_desc"
                 app:layout_constraintEnd_toEndOf="@+id/health_button1"
                 app:layout_constraintStart_toStartOf="@+id/health_button1"
@@ -88,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
                 android:text="@string/health_button2_desc"
                 app:layout_constraintEnd_toEndOf="@+id/health_button2"
                 app:layout_constraintStart_toStartOf="@+id/health_button2"
@@ -98,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
                 android:text="@string/nutrition_button2_desc"
                 app:layout_constraintEnd_toEndOf="@+id/nutrition_button2"
                 app:layout_constraintStart_toStartOf="@+id/nutrition_button2"
@@ -114,11 +118,12 @@
                 app:layout_constraintStart_toStartOf="@+id/nutrition_button1"
                 app:layout_constraintTop_toTopOf="@+id/k12_button4_desc" />
 
-                    <TextView
+            <TextView
                 android:id="@+id/nutrition_button3_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
                 android:text="@string/nutrition_button3_desc"
                 app:layout_constraintEnd_toEndOf="@+id/nutrition_button3"
                 app:layout_constraintStart_toStartOf="@+id/nutrition_button3"
