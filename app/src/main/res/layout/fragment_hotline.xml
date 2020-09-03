@@ -35,7 +35,7 @@
                 android:id="@+id/non_emergency_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/non_emergency_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="24sp"
@@ -57,15 +57,13 @@
                 android:id="@+id/parent_hotline_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="100dp"
-                android:layout_marginRight="100dp"
                 android:text="@string/parent_hotline_label"
                 app:layout_constraintBottom_toBottomOf="@+id/parent_hotline_number"
-                app:layout_constraintEnd_toEndOf="@+id/emergency_title"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/non_emergency_title"
+                app:layout_constraintEnd_toEndOf="@+id/government_affiliation_text"
+                app:layout_constraintHorizontal_bias="0.076"
+                app:layout_constraintStart_toStartOf="@+id/government_affiliation_text"
                 app:layout_constraintTop_toTopOf="@+id/parent_hotline_number"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/poison_control_label"
@@ -84,8 +82,7 @@
                 android:text="@string/human_trafficking_hotline_label"
                 app:layout_constraintBottom_toBottomOf="@+id/textView5"
                 app:layout_constraintStart_toStartOf="@+id/parent_hotline_label"
-                app:layout_constraintTop_toTopOf="@+id/textView5"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -101,7 +98,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="72dp"
                 android:autoLink="phone"
                 android:text="@string/poison_control_number"
                 app:layout_constraintEnd_toEndOf="@+id/parent_hotline_number"
@@ -111,13 +108,13 @@
                 android:id="@+id/parent_hotline_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="156dp"
-                android:layout_marginLeft="156dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="44dp"
                 android:autoLink="phone"
                 android:linksClickable="true"
                 android:text="@string/parent_hotline_number"
-                app:layout_constraintStart_toStartOf="@+id/non_emergency_title"
+                app:layout_constraintEnd_toEndOf="@+id/government_affiliation_text"
+                app:layout_constraintHorizontal_bias="0.934"
+                app:layout_constraintStart_toStartOf="@+id/government_affiliation_text"
                 app:layout_constraintTop_toBottomOf="@+id/government_affiliation_text" />
 
             <TextView
