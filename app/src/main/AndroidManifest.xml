@@ -13,10 +13,6 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@menu/web_view_menu" />
-
         <activity android:name=".WebViewActivity" />
         <activity
             android:name=".MainActivity"

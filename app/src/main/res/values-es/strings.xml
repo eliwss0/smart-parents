@@ -20,7 +20,9 @@
         son específicamente relevantes para Texas. Por favor tenga esto en cuenta.</string>
     <string name="legal_info">Todos los derechos de autor pertenecen a sus respectivos dueños.
         \nProgramado por Eli Weiss para Children at Risk.</string>
-    <string name="about_org">CHILDREN AT RISK actúa como catalizador del cambio para mejorar la calidad de vida de los niños a través de la investigación, el análisis de políticas públicas, la educación, la colaboración y la promoción.</string>
+    <string name="about_org">CHILDREN AT RISK actúa como catalizador del cambio para mejorar la
+        calidad de vida de los niños a través de la investigación, el análisis de políticas
+        públicas, la educación, la colaboración y la promoción.</string>
     <string name="close_web_view">Cerrar</string>
     <string name="refresh_web_view">Actualizar</string>
     <string name="external_browser">Abrir en el navegador predeterminado</string>
@@ -32,10 +34,11 @@
     <string name="health_button2_label">Información para padres de CDC</string>
     <string name="nutrition_button1_label">Encuentre un banco de alimentos</string>
     <string name="nutrition_button2_label">Encontrar comidas escolares</string>
-    <string name="nutrition_button3_label">Comidas gratuitas para niños en Houston</string>
+    <string name="nutrition_button3_label">Comidas gratuitas para\nniños en Houston</string>
     <string name="health_button1_desc">Información y recursos de salud para familias inmigrantes.</string>
     <string name="health_button2_desc">Una colección de recursos de salud sugeridos por el CDC para padres</string>
-    <string name="nutrition_button1_desc">Encuentre su banco de alimentos local ingresando su código postal y estado en esta página web.</string>
+    <string name="nutrition_button1_desc">Encuentre su banco de alimentos local ingresando su
+        código postal y estado en esta página web.</string>
     <string name="nutrition_button2_desc">Encuentre comidas escolares cerca de usted usando este mapa interactivo</string>
     <string name="nutrition_button3_desc">Encuentre lugares con comidas sin costo para niños en Houston</string>
     <string name="k12education_button1_label">Guía Escolar de Texas</string>
@@ -43,31 +46,43 @@
     <string name="k12education_button3_label">Construyendo escuelas\ncon medalla de oro</string>
     <string name="k12education_button4_label">Lista de verificación de\npreparación para la universidad</string>
     <string name="k12education_button5_label">Guía de Acción para Padres</string>
-    <string name="k12education_button1_desc">¿Quiere conocer la calidad de las escuelas cercanas a usted? Utilice esta herramienta para buscar y comparar escuelas de Texas.</string>
-    <string name="k12education_button2_desc">Una lista de preguntas que los padres pueden hacer mientras visitan las escuelas.</string>
-    <string name="k12education_button3_desc">Prácticas escolares de calidad que pueden ser adoptadas por los campus y por las que los padres pueden defender.</string>
-    <string name="k12education_button4_desc">Esta lista de verificación ayuda a los padres a realizar un seguimiento de las acciones para apoyar a los niños a lo largo de su educación por grado.</string>
-    <string name="k12education_button5_desc">Esta guía brinda consejos y acciones que los padres pueden tomar para apoyar el éxito académico de sus hijos.</string>
+    <string name="k12education_button1_desc">¿Quiere conocer la calidad de las escuelas cercanas a
+        usted? Utilice esta herramienta para buscar y comparar escuelas de Texas.</string>
+    <string name="k12education_button2_desc">Una lista de preguntas que los padres pueden hacer
+        mientras visitan las escuelas.</string>
+    <string name="k12education_button3_desc">Prácticas escolares de calidad que pueden ser adoptadas
+        por los campus y por las que los padres pueden defender.</string>
+    <string name="k12education_button4_desc">Esta lista de verificación ayuda a los padres a realizar
+        un seguimiento de las acciones para apoyar a los niños a lo largo de su educación por grado.</string>
+    <string name="k12education_button5_desc">Esta guía brinda consejos y acciones que los padres pueden
+        tomar para apoyar el éxito académico de sus hijos.</string>
     <string name="child_safety_button1_label">Seguridad infantil en línea</string>
     <string name="child_safety_button2_label">Seguridad Contra Incendios</string>
     <string name="child_safety_button3_label">Seguridad en el agua y la natación</string>
-    <string name="child_safety_button1_desc">Mantener a los niños a salvo de los incendios: materiales para aprender más sobre cómo hablar con los niños sobre la seguridad contra incendios.</string>
-    <string name="child_safety_button2_desc">Algunas buenas reglas generales para que los padres garanticen la seguridad de sus hijos en línea.</string>
+    <string name="child_safety_button1_desc">Mantener a los niños a salvo de los incendios: materiales
+        para aprender más sobre cómo hablar con los niños sobre la seguridad contra incendios.</string>
+    <string name="child_safety_button2_desc">Algunas buenas reglas generales para que los padres
+        garanticen la seguridad de sus hijos en línea.</string>
     <string name="child_safety_button3_desc">Recursos de seguridad hídrica para familias y niños.</string>
     <string name="eceducation_button1_label">Encuentra cuidado de niños</string>
     <string name="eceducation_button2_label">Childcare Aware Texas</string>
-    <string name="eceducation_button3_label">Cuidado infantil de primera línea en Texas</string>
-    <string name="eceducation_button4_label">Mapa del desierto de cuidado infantil</string>
-    <string name="eceducation_button5_label">Lista de verificación de cuidado infantil</string>
+    <string name="eceducation_button3_label">Cuidado infantil de\nprimera línea en Texas</string>
+    <string name="eceducation_button4_label">Mapa del desierto\nde cuidado infantil</string>
+    <string name="eceducation_button5_label">Lista de verificación\nde cuidado infantil</string>
     <string name="eceducation_button1_desc">Busque un centro de cuidado infantil o una casa cerca de usted.</string>
-    <string name="eceducation_button2_desc">Los CCR&amp;R locales pueden ayudar a las familias a encontrar opciones de cuidado infantil cerca de su hogar o trabajo.</string>
-    <string name="eceducation_button3_desc">Este portal ayuda a los trabajadores esenciales de primera línea a encontrar cuidado infantil disponible cerca de su hogar o trabajo.</string>
-    <string name="eceducation_button4_desc">Vea este mapa para explorar los desiertos de cuidado infantil y el panorama de acceso en todo el estado de Texas.</string>
-    <string name="eceducation_button5_desc">Esta lista de verificación lo ayudará a reconocer la calidad y tomar decisiones informadas al elegir el cuidado infantil.</string>
+    <string name="eceducation_button2_desc">Los CCR&amp;R locales pueden ayudar a las familias a
+        encontrar opciones de cuidado infantil cerca de su hogar o trabajo.</string>
+    <string name="eceducation_button3_desc">Este portal ayuda a los trabajadores esenciales de primera
+        línea a encontrar cuidado infantil disponible cerca de su hogar o trabajo.</string>
+    <string name="eceducation_button4_desc">Vea este mapa para explorar los desiertos de cuidado
+        infantil y el panorama de acceso en todo el estado de Texas.</string>
+    <string name="eceducation_button5_desc">Esta lista de verificación lo ayudará a reconocer la
+        calidad y tomar decisiones informadas al elegir el cuidado infantil.</string>
     <string name="emergency_title">Ayuda de emergencia</string>
     <string name="emergency_call">En una emergencia potencialmente mortal, llame al 911.</string>
     <string name="non_emergency_title">Ayuda que no es de emergencia</string>
-    <string name="government_affiliation">La información de contacto que aparece en la lista pertenece a organizaciones sin fines de lucro y no son agencias gubernamentales ni están afiliadas al gobierno.</string>
+    <string name="government_affiliation">La información de contacto que aparece en la lista pertenece
+        a organizaciones sin fines de lucro y no son agencias gubernamentales ni están afiliadas al gobierno.</string>
     <string name="parent_hotline_label">Línea nacional de\nayuda para padres</string>
     <string name="parent_hotline_times">Disponible de lunes a viernes\nde 10 a.m . A 7 p. m. PST</string>
     <string name="poison_control_label">Control de envenenamiento</string>
